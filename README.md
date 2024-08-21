@@ -1,21 +1,22 @@
-# Nome do projeto
+# ReCiclo
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos recicláveis e seus produtores se conectarem, auxiliando no processo de reciclagem e na geração de renda ambientalmente correta.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Pedro Henrique Barbosa Montandom de Araújo
+* Rafael de Paiva Gomes
+* João Pedro Vitor de Oliveira
+* Italo Vitorino
+* Matheus Ferreira Titton
 * Nome completo do aluno 6
+* Nome completo do aluno 7
 
 ## Professor
 
-* Nome completo do professor 1
-* Nome completo do professor 2
-* Nome completo do professor 3
+* Aline Brito
+* Cristiano de Machedo Neto
+* Cleia Marcia Gomes Amaral
 
 ## Instruções de utilização
 
