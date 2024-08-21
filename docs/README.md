@@ -39,25 +39,24 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ## 1. Introdução
 
-_Apresente uma frase introdutória definindo o que será apresentado._
+O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos recicláveis e seus produtores se conectarem, auxiliando no processo de reciclagem e na geração de renda ambientalmente correta
 
 ### 1.1 Contextualização
 
-_Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere.
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas)._
+A coleta seletiva é um elemento fundamental na gestão dos resíduos sólidos urbanos, desempenhando um papel crucial na reciclagem e na redução dos impactos ambientais. Apesar de sua importância, a eficiência desse processo é frequentemente comprometida por uma série de desafios.
+ A cobertura geográfica da coleta seletiva é muitas vezes limitada, deixando áreas significativas sem acesso a esse serviço essencial. Além disso, a falta de infraestrutura adequada, como lixeiras apropriadas, veículos especializados e centros de triagem, impede a execução eficaz das operações de coleta. Outro fator relevante é a falta de conscientização e educação da população sobre a importância e os procedimentos corretos para a separação dos resíduos recicláveis. 
+A diversidade nos modelos de coleta, que varia entre diferentes regiões, também contribui para a confusão e a ineficácia do sistema. Por fim, a ausência de monitoramento eficiente e de indicadores claros de desempenho dificulta a identificação de áreas problemáticas e a implementação de melhorias.
+
 
 ### 1.2 Problema
 
-_Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o trabalho trata. 
-O **problema** pode ser algo vivido em uma empresa específica. Neste caso, o aluno deve rapidamente apresentar 
-o cenário de problema da empresa. A empresa só deve ser citada explicitamente se o aluno tiver autorização 
-para tal._
+Esses fatores combinados resultam em uma ineficiência generalizada no sistema de coleta seletiva, afetando negativamente todo o ciclo de reciclagem, desde a coleta até a destinação final dos resíduos recicláveis. A falta de uma gestão eficiente, aliada a barreiras estruturais e educacionais, compromete a sustentabilidade ambiental e a eficácia do processo de reciclagem. 
+O problema central é, portanto, a ineficiência multifacetada da coleta seletiva, que exige soluções integradas, como a implementação de uma aplicação Web que possa auxiliar na superação desses desafios, melhorando a gestão, triagem e destinação dos resíduos recicláveis, e, assim, promovendo uma coleta seletiva mais eficaz e sustentável.
+
 
 ### 1.3 Objetivo geral
 
-_O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, avaliar, comparar, desenvolver, etc.). No caso específico deste projeto, o objetivo deste trabalho é desenvolver um sistema para automação de processos para um problema específico._
+No caso específico deste projeto, o objetivo deste trabalho é desenvolver um sistema web que aumente a eficiência da coleta seletiva, enfrentando os desafios de cobertura geográfica limitada, falta de infraestrutura adequada, e a ausência de monitoramento eficaz.
 
 #### 1.3.1 Objetivos específicos
 
@@ -71,7 +70,7 @@ desenvolvimento do seu trabalho e, caso deseje, destaque alguma contribuição d
 
 ## 2. Participantes do processo
 
-_Apresente aqui os perfis dos usuários-chave do sistema. Diversas são as informações que podem ser relevantes para a definição dos perfis dos usuários, tais como idade, gênero, aspectos culturais, nível de educação, entre outros. A pesquisa de mercado pode ser uma ferramenta poderosa para se identificar e caracterizar os perfis de usuários. Apresente claramente o papel a ser desempenhado por cada usuário._
+Os Produtores de Lixo são responsáveis por identificar e sinalizar os resíduos que precisam ser coletados, fornecendo informações como tipo de material e localização. Já os Coletores de Lixo utilizam o aplicativo para receber essas informações em tempo real, planejar rotas de coleta e otimizar o processo, garantindo um serviço eficiente e sustentável para a comunidade.
 
 ## 3. Modelagem do processo de negócio
 
