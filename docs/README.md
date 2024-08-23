@@ -1,27 +1,29 @@
-# TITULO DO PROJETO
+# ReCiclo
 
 
-**Nome completo do Aluno 1, email do aluno 1**
+**Pedro Henrique Barbosa Montandon de Araujo, pedrobarbosa89@gmail.com**
 
-**Nome completo do Aluno 2, email do aluno 2**
+**Rafael de Paiva Gomes, rafaeldepaivagomes@outlook.com**
 
-**Nome completo do Aluno 3, email do aluno 3**
+**João Pedro Vitor de Oliveira, joao.pvo44@gmail.com**
 
-**Nome completo do Aluno 4, email do aluno 4**
+**Italo Vitorino Batista Silva, italo.vitorinobs@hotmail.com**
 
-**Nome completo do Aluno 5, email do aluno 5**
+**Leonardo Lopes de Vasconcelos Paes, leolpaes@gmail.com**
 
-**Nome completo do Aluno 6, email do aluno 6**
+**Leonardo Cesar da Silva, le0c3sar@gmail.com**
+
+**Matheus Ferreira Titton, matheustitton@gmail.com**
 
 ---
 
 Professores:
 
-** Prof. Nome do Prof 1 **
+** Aline Brito **
 
-** Prof. Nome do Prof 2 **
+** Cristiano de Macedo Neto **
 
-** Prof. Nome do Prof 3 **
+** Cleia Marcia Gomes Amaral **
 
 ---
 
@@ -44,7 +46,7 @@ O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos reciclá
 ### 1.1 Contextualização
 
 A coleta seletiva é um elemento fundamental na gestão dos resíduos sólidos urbanos, desempenhando um papel crucial na reciclagem e na redução dos impactos ambientais. Apesar de sua importância, a eficiência desse processo é frequentemente comprometida por uma série de desafios.
- A cobertura geográfica da coleta seletiva é muitas vezes limitada, deixando áreas significativas sem acesso a esse serviço essencial. Além disso, a falta de infraestrutura adequada, como lixeiras apropriadas, veículos especializados e centros de triagem, impede a execução eficaz das operações de coleta. Outro fator relevante é a falta de conscientização e educação da população sobre a importância e os procedimentos corretos para a separação dos resíduos recicláveis. 
+A cobertura geográfica da coleta seletiva é muitas vezes limitada, deixando áreas significativas sem acesso a esse serviço essencial. Além disso, a falta de infraestrutura adequada, como lixeiras apropriadas, veículos especializados e centros de triagem, impede a execução eficaz das operações de coleta. Outro fator relevante é a falta de conscientização e educação da população sobre a importância e os procedimentos corretos para a separação dos resíduos recicláveis. 
 A diversidade nos modelos de coleta, que varia entre diferentes regiões, também contribui para a confusão e a ineficácia do sistema. Por fim, a ausência de monitoramento eficiente e de indicadores claros de desempenho dificulta a identificação de áreas problemáticas e a implementação de melhorias.
 
 
