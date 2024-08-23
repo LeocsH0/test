@@ -41,7 +41,7 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ## 1. Introdução
 
-O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos recicláveis e seus produtores se conectarem, auxiliando no processo de reciclagem e na geração de renda ambientalmente correta
+O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos recicláveis e seus produtores se conectarem, auxiliando no processo de reciclagem e na geração de renda ambientalmente correta.
 
 ### 1.1 Contextualização
 
