@@ -10,12 +10,12 @@ O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos reciclá
 * Italo Vitorino
 * Matheus Ferreira Titton
 * Leonardo Lopes de Vasconcellos Paes
-* Nome completo do aluno 7
+* Leonardo Cesar da Silva
 
 ## Professor
 
 * Aline Brito
-* Cristiano de Machedo Neto
+* Cristiano de Macedo Neto
 * Cleia Marcia Gomes Amaral
 
 ## Instruções de utilização
