@@ -33,8 +33,7 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade Cató
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+_**Resumo**. O projeto ReCiclo busca conectar coletadores de resíduos recicláveis e seus produtores por meio de uma plataforma web, com o objetivo de melhorar a eficiência da coleta seletiva e a geração de renda sustentável. O projeto aborda a ineficiência do atual sistema de coleta seletiva, destacando desafios como cobertura geográfica limitada, falta de infraestrutura e baixa conscientização da população. A solução proposta é um sistema que otimiza a gestão, triagem e destinação dos resíduos, promovendo uma coleta mais eficaz e sustentável._
 
 ---
 
