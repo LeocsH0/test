@@ -67,8 +67,9 @@ c) Criar e otimizar uma rede de reciclagem em que os usuários possam se conhece
 
 ### 1.4 Justificativas
 
-_Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e, caso deseje, destaque alguma contribuição do trabalho._
+O desenvolvimento deste aplicativo é justificado pela necessidade urgente de otimizar a gestão de resíduos, uma área essencial para a sustentabilidade e a eficiência urbana. Atualmente, a comunicação fragmentada entre produtores de lixo e transportadores resulta em ineficiências operacionais, altos custos e dificuldades logísticas que impactam negativamente tanto o meio ambiente quanto a economia.
+
+Além disso, a ausência de uma plataforma centralizada que conecte esses atores de maneira eficaz cria barreiras para a formação de parcerias estáveis e para a utilização otimizada dos recursos, como veículos de coleta. Ao resolver esses problemas, o aplicativo não apenas melhora a eficiência na coleta de resíduos, mas também promove práticas mais sustentáveis, beneficiando a sociedade como um todo.
 
 ## 2. Participantes do processo
 
