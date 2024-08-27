@@ -61,8 +61,9 @@ No caso específico deste projeto, o objetivo deste trabalho é desenvolver um s
 
 #### 1.3.1 Objetivos específicos
 
-_Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar sua prática investigativa, ou como você irá aprofundar seu trabalho._
+a) Disponibilizar uma plataforma onde o coletor de resíduos recicláveis poderá mapear as ofertas dos mesmos resíduos;
+b) Disponibilizar um local onde o produtor de resíduo reciclável poderá evacuar os resíduos;
+c) Criar e otimizar uma rede de reciclagem em que os usuários possam se conhecer, se avaliar e, então, ter confiança no uso do sistema e no processo de reciclagem.
 
 ### 1.4 Justificativas
 
