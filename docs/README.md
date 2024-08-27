@@ -79,7 +79,11 @@ Os Produtores de Lixo são responsáveis por identificar e sinalizar os resíduo
 
 ### 3.1. Análise da situação atual
 
-_Apresente uma descrição textual de como os sistemas atuais resolvem o problema que se propõe a resolver.  Caso sua proposta seja inovadora e não existam processos claramente definidos, **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente**, mesmo que não se utilize tecnologia computacional._
+Atualmente, a conexão entre produtores de lixo e transportadores é realizada de forma fragmentada e ineficiente. Muitos produtores dependem de contatos informais, como ligações telefônicas ou indicações pessoais, para encontrar transportadores disponíveis. Esse processo é demorado, pouco confiável e geralmente não permite a comparação de preços ou a escolha da melhor opção.
+
+Transportadores, por sua vez, muitas vezes operam com base em demanda instável e irregular, recebendo chamadas esporádicas que resultam em rotas subótimas e veículos subutilizados. Não existe uma plataforma centralizada que facilite essa comunicação, o que leva a dificuldades na coordenação e negociação, impactando diretamente nos custos e na eficiência operacional.
+
+A falta de um sistema estruturado também dificulta o estabelecimento de parcerias de longo prazo, tornando o processo mais vulnerável a falhas de comunicação e a atrasos no recolhimento de resíduos. Em resumo, o processo atual é manual, fragmentado e carece de eficiência, o que torna evidente a necessidade de uma solução integrada e tecnológica.
 
 ### 3.2. Descrição geral da proposta de solução
 
