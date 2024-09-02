@@ -1,7 +1,11 @@
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.2 Processo 2 – Realizar Coleta
 
-_Apresente aqui o nome e as oportunidades de melhoria para o processo 2. 
-Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN._
+Para um coletor de resíduos sólidos realizar uma coleta ele deve, atualmente, identificar - seja através
+de conhecidos, seja por mero acaso - os locais onde coletar os resíduos.
+Nosso sistema busca melhorar o processo de identificação e coleta dos resíduos recicláveis, oferecendo ao
+coletor uma lista de locais onde estão sendo oferecidos resíduos, colocando as partes de demanda e oferta
+em contato e, então, registrando as interações entre as duas partes para a atualização do próprio sistema.
+
 
 ![Exemplo de um Modelo BPMN do PROCESSO 2](images/process.png "Modelo BPMN do Processo 2.")
 
