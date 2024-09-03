@@ -87,7 +87,21 @@ A falta de um sistema estruturado também dificulta o estabelecimento de parceri
 
 ### 3.2. Descrição geral da proposta de solução
 
-_Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias._
+A proposta da Reciclo visa simplificar o processo de coleta e reciclagem de resíduos, atuando como um intermediário centralizado entre coletores de lixo e produtores de resíduos. A plataforma centralizará vários processos essenciais, cada um projetado para resolver aspectos específicos do problema de forma eficiente e prática. Aqui estão os principais processos e suas respectivas funções:
+
+Registro de Resíduo:
+Pelo produtor – Este processo permite que os produtores de resíduos registrem informações detalhadas sobre o lixo que precisam descartar. Eles especificam a quantidade, o tipo de resíduo e o local de busca. Esse processo é crucial para garantir que os coletores recebam informações precisas e completas, facilitando a logística da coleta e assegurando que os resíduos sejam manuseados adequadamente.
+
+Aceitar Coleta:
+Pelo coletor – Neste estágio, os coletores podem visualizar os registros de resíduos disponíveis e selecionar os lotes de interesse. Eles manifestam sua disponibilidade para realizar a coleta, o que otimiza a distribuição do trabalho e evita sobrecarga para os coletores. Isso garante uma coleta mais rápida e eficiente, além de reduzir o tempo de espera para os produtores de resíduos.
+
+Filtragem de Resíduos:
+Pelo coletor – Este processo facilita a localização dos resíduos de maior interesse para os coletores. Com filtros avançados, os coletores podem rapidamente identificar os lotes que atendem às suas necessidades específicas, seja por tipo de material ou proximidade geográfica. Isso melhora a eficiência operacional, permitindo que os coletores façam escolhas informadas e economizem tempo e recursos.
+
+Avaliação:
+Entre usuários – A avaliação mútua entre produtores de resíduos e coletores é fundamental para manter a qualidade do serviço na plataforma. Após a coleta, ambas as partes podem avaliar sua experiência, ranqueando os melhores classificados na filtragem. Esse sistema de feedback contínuo promove a confiança na plataforma, incentiva a melhoria contínua dos serviços e ajuda novos usuários a tomar decisões baseadas em experiências reais.
+
+Cada um desses processos foi pensado para abordar os principais desafios do setor, desde a eficiência logística até a confiabilidade do serviço. Ao integrar essas funcionalidades, a Reciclo não apenas facilita a interação entre produtores de resíduos e coletores, mas também promove práticas de descarte sustentável e eficaz, contribuindo para um ambiente mais limpo e seguro.
 
 ### 3.3. Modelagem dos processos
 
