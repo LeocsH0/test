@@ -19,7 +19,7 @@
 
 Professores:
 
-** Aline Noberta de Brito **
+** Aline Norbeta de Brito **
 
 ** Cristiano de Macedo Neto **
 
