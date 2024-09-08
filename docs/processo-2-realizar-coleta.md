@@ -7,7 +7,7 @@ coletor uma lista de locais onde estão sendo oferecidos resíduos, colocando as
 em contato e, então, registrando as interações entre as duas partes para a atualização do próprio sistema.
 
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](image/solicitar-coleta-bpmn.png "Modelo BPMN do Processo 2.")
+![Exemplo de um Modelo BPMN do PROCESSO 2](images/solicitar-coleta-bpmn.png "Modelo BPMN do Processo 2 - solicitar coleta.")
 
 
 #### Detalhamento das atividades
