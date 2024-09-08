@@ -107,7 +107,7 @@ Cada um desses processos foi pensado para abordar os principais desafios do seto
 
 [PROCESSO 1 - Nome do Processo](processo-1-nome-do-processo.md "Detalhamento do Processo 1.")
 
-[PROCESSO 2 - Nome do Processo](processo-2-nome-do-processo.md "Detalhamento do Processo 2.")
+[PROCESSO 2 - Realizar Coleta](realizar-coleta.md "Detalhamento do Processo 2.")
 
 [PROCESSO 3 - Nome do Processo](processo-3-nome-do-processo.md "Detalhamento do Processo 3.")
 
