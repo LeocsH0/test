@@ -95,8 +95,8 @@ Pelo produtor – Este processo permite que os produtores de resíduos registrem
 Aceitar Coleta:
 Pelo coletor – Neste estágio, os coletores podem visualizar os registros de resíduos disponíveis e selecionar os lotes de interesse. Eles manifestam sua disponibilidade para realizar a coleta, o que otimiza a distribuição do trabalho e evita sobrecarga para os coletores. Isso garante uma coleta mais rápida e eficiente, além de reduzir o tempo de espera para os produtores de resíduos.
 
-Filtragem de Resíduos:
-Pelo coletor – Este processo facilita a localização dos resíduos de maior interesse para os coletores. Com filtros avançados, os coletores podem rapidamente identificar os lotes que atendem às suas necessidades específicas, seja por tipo de material ou proximidade geográfica. Isso melhora a eficiência operacional, permitindo que os coletores façam escolhas informadas e economizem tempo e recursos.
+Gestão de Contas:
+Para todos os usuários – A plataforma permite o cadastro de contas tanto para coletores quanto para produtores de resíduos. Esse processo facilita o gerenciamento de perfis, garantindo que os usuários possam acessar e interagir com o sistema de maneira personalizada e organizada.
 
 Avaliação:
 Entre usuários – A avaliação mútua entre produtores de resíduos e coletores é fundamental para manter a qualidade do serviço na plataforma. Após a coleta, ambas as partes podem avaliar sua experiência, ranqueando os melhores classificados na filtragem. Esse sistema de feedback contínuo promove a confiança na plataforma, incentiva a melhoria contínua dos serviços e ajuda novos usuários a tomar decisões baseadas em experiências reais.
