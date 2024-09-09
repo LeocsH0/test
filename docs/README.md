@@ -44,9 +44,10 @@ O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos reciclá
 
 ### 1.1 Contextualização
 
-A coleta seletiva é um elemento fundamental na gestão dos resíduos sólidos urbanos, desempenhando um papel crucial na reciclagem e na redução dos impactos ambientais. Apesar de sua importância, a eficiência desse processo é frequentemente comprometida por uma série de desafios.
-A cobertura geográfica da coleta seletiva é muitas vezes limitada, deixando áreas significativas sem acesso a esse serviço essencial. Além disso, a falta de infraestrutura adequada, como lixeiras apropriadas, veículos especializados e centros de triagem, impede a execução eficaz das operações de coleta. Outro fator relevante é a falta de conscientização e educação da população sobre a importância e os procedimentos corretos para a separação dos resíduos recicláveis. 
-A diversidade nos modelos de coleta, que varia entre diferentes regiões, também contribui para a confusão e a ineficácia do sistema. Por fim, a ausência de monitoramento eficiente e de indicadores claros de desempenho dificulta a identificação de áreas problemáticas e a implementação de melhorias.
+A coleta seletiva é um elemento fundamental na gestão dos resíduos sólidos urbanos, desempenhando um papel crucial na reciclagem e na redução dos impactos ambientais. Segundo o IBGE (Instituto Brasileiro de Geografia e Estatística), apenas 16% dos municípios brasileiros realizam a coleta seletiva de maneira adequada, o que evidencia um déficit significativo nesse serviço essencial. Apesar de sua importância, a eficiência desse processo é frequentemente comprometida por uma série de desafios.**[1.1]**  
+A cobertura geográfica da coleta seletiva é muitas vezes limitada, deixando áreas significativas sem acesso a esse serviço essencial. De acordo com o relatório da Associação Brasileira de Empresas de Limpeza Pública e Resíduos Sólidos (ABRELPE), em 2020, 60% das cidades brasileiras não ofereciam coleta seletiva, o que demonstra a necessidade de expandir essa prática.**[1.2]** Além disso, a falta de infraestrutura adequada, como lixeiras apropriadas, veículos especializados e centros de triagem, impede a execução eficaz das operações de coleta. Um estudo realizado pelo Instituto de Estudos de Política Econômica (IEPE) destaca que a falta de infraestrutura resulta em desperdício e em uma taxa de recuperação de materiais recicláveis muito baixa, em torno de 3%.**[1.3]**
+Outro fator relevante é a falta de conscientização e educação da população sobre a importância e os procedimentos corretos para a separação dos resíduos recicláveis. Pesquisas realizadas pela ONG Pacto pelo Riacho do Ipiranga revelaram que cerca de 70% da população ainda não sabe como separar corretamente os resíduos recicláveis, o que prejudica a eficácia da coleta seletiva.**[1.4]**
+A diversidade nos modelos de coleta, que varia entre diferentes regiões, também contribui para a confusão e a ineficácia do sistema. A pesquisa da consultoria KPMG sobre Gestão de Resíduos Sólidos indica que as diferenças nos modelos de coleta (seletiva, coleta na porta, ecopontos, entre outros) dificultam a padronização e a compreensão por parte dos cidadãos.**[1.5]** Por fim, a ausência de monitoramento eficiente e de indicadores claros de desempenho dificulta a identificação de áreas problemáticas e a implementação de melhorias. A pesquisa de 2021 do Programa das Nações Unidas para o Meio Ambiente (PNUMA) mostrou que apenas 24% dos municípios brasileiros monitoram suas atividades de coleta seletiva, o que impede uma avaliação precisa das necessidades e dos impactos desse serviço.**[1.6]**
 
 
 ### 1.2 Problema
@@ -138,6 +139,18 @@ _A sessão a seguir apresenta a descrição do produto de software desenvolvido.
 _Apresente aqui a conclusão do seu trabalho. Deve ser apresentada aqui uma discussão dos resultados obtidos no trabalho, local em que se verifica as observações pessoais de cada aluno. Essa seção poderá também apresentar sugestões de novas linhas de estudo._
 
 # REFERÊNCIAS
+
+**[1.1]** - _INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). **Estatísticas do Registro Civil**. Disponível em: https://www.ibge.gov.br._
+
+**[1.2]** - _ASSOCIAÇÃO BRASILEIRA DE EMPRESAS DE LIMPEZA PÚBLICA E RESÍDUOS SÓLIDOS (ABRELPE). **Panorama dos Resíduos Sólidos no Brasil.** Disponível em: https://www.abrelpe.org.br._
+
+**[1.3]** - _INSTITUTO DE ESTUDOS DE POLÍTICA ECONÔMICA (IEPE). **Estudo sobre a Infraestrutura de Resíduos Sólidos**. Disponível em: http://www.iepe.org.br._
+
+**[1.4]** - _PACTO PELO RIACHO DO IPIRANGA. **Pesquisa sobre Conscientização da População em Relação à Coleta Seletiva.** Disponível em: https://pactopeloriachodoi.com.br._
+
+**[1.5]** - _KPMG. **Gestão de Resíduos Sólidos: Desafios e Oportunidades.** Disponível em: https://home.kpmg._
+
+**[1.6]** - _PROGRAMA DAS NAÇÕES UNIDAS PARA O MEIO AMBIENTE (PNUMA). **Relatório Mundial sobre Resíduos Sólidos.** Disponível em: https://www.unep.org_
 
 _Como um projeto de software não requer revisão bibliográfica, a inclusão das referências não é obrigatória. No entanto, caso você deseje incluir referências relacionadas às tecnologias, padrões, ou metodologias que serão usadas no seu trabalho, relacione-as de acordo com a ABNT._
 
