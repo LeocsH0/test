@@ -1,9 +1,10 @@
-### 3.3.1 Processo 1 – NOME DO PROCESSO
+### 3.3.1 Processo 1 – Registrar Resíduos
 
-_Apresente aqui o nome e as oportunidades de melhoria para o processo 1. 
-Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN._
+Atualmente, o produtor de resíduos enfrenta dificuldades para coordenar a coleta dos recicláveis, pois não há um sistema estruturado para informar os locais e volumes de resíduos disponíveis. Muitas vezes, a comunicação sobre os pontos de coleta é feita de forma informal, através de contatos pessoais, ou de maneira aleatória. Isso pode resultar em atrasos e ineficiências na coleta dos materiais recicláveis.
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](images/process.png "Modelo BPMN do Processo 1.")
+No ReCiclo, o registro da demanda de resíduos otimizará o processo de coleta ao fornecer uma visão detalhada dos locais e volumes de resíduos. Com isso, tanto produtores quanto coletores irão se beneficiar de uma maior previsibilidade e eficiência, possibilitando um atendimento mais ágil às necessidades de coleta.
+
+![Exemplo de um Modelo BPMN do PROCESSO 1](images/processo-1-registrar-residuos.png "Modelo BPMN do Processo de Registrar Resíduos.")
 
 #### Detalhamento das atividades
 
@@ -48,20 +49,20 @@ _* **Tabela** - campo formado por uma matriz de valores_
 
 | **Comandos**         |  **Destino**                   | **Tipo** |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel  ) |
+| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel  )|
 | ***Exemplo:***       |                                |                   |
 | entrar               | Fim do Processo 1              | default           |
 | cadastrar            | Início do proceso de cadastro  |                   |
 
 
-**Nome da atividade 2**
+**Registrar resíduo(s) para coleta**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
 | [Nome do campo] | [tipo de dados]  |                |                   |
 |                 |                  |                |                   |
 
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+| **Comandos**         |  **Destino**                                 | **Tipo**          |
+| ---------------------| ---------------------------------------------| ------------------|
+| Registrar            | Publicar demanda de coleta do(s) resíduo(s)  | default           |
+| Cancelar             | Página inicial                               | cancel            |
