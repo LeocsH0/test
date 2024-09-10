@@ -106,7 +106,7 @@ Cada um desses processos foi pensado para abordar os principais desafios do seto
 
 ### 3.3. Modelagem dos processos
 
-[PROCESSO 1 - Nome do Processo](processo-1-nome-do-processo.md "Detalhamento do Processo 1.")
+[PROCESSO 1 - Registrar Resíduos](processo-1-registrar-residuos.md "Detalhamento do Processo 1.")
 
 [PROCESSO 2 - Realizar Coleta](realizar-coleta.md "Detalhamento do Processo 2.")
 
