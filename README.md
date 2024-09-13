@@ -14,7 +14,7 @@ O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos reciclá
 
 ## Professor
 
-* Aline Brito
+* Aline Norberta de Brito
 * Cristiano de Macedo Neto
 * Cleia Marcia Gomes Amaral
 
