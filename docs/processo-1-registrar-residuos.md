@@ -8,61 +8,40 @@ No ReCiclo, o registro da demanda de resíduos otimizará o processo de coleta a
 
 #### Detalhamento das atividades
 
-_Descreva aqui cada uma das propriedades das atividades do processo 1. 
-Devem estar relacionadas com o modelo de processo apresentado anteriormente._
+**Realizar login no sistema**
 
-_Os tipos de dados a serem utilizados são:_
+| **Campo**       | **Tipo**         | **Restrições**         | **Valor default** |
+| --------------- | ---------------- | ---------------------- | ----------------- |
+| [Nome do campo] | [tipo de dados]  |                        |                   |
+| login           | Caixa de Texto   | formato de e-mail      |                   |
+| senha           | Caixa de Texto   | mínimo de 8 caracteres |                   |
 
-_* **Área de texto** - campo texto de múltiplas linhas_
-
-_* **Caixa de texto** - campo texto de uma linha_
-
-_* **Número** - campo numérico_
-
-_* **Data** - campo do tipo data (dd-mm-aaaa)_
-
-_* **Hora** - campo do tipo hora (hh:mm:ss)_
-
-_* **Data e Hora** - campo do tipo data e hora (dd-mm-aaaa, hh:mm:ss)_
-
-_* **Imagem** - campo contendo uma imagem_
-
-_* **Seleção única** - campo com várias opções de valores que são mutuamente exclusivas (tradicional radio button ou combobox)_
-
-_* **Seleção múltipla** - campo com várias opções que podem ser selecionadas mutuamente (tradicional checkbox ou listbox)_
-
-_* **Arquivo** - campo de upload de documento_
-
-_* **Link** - campo que armazena uma URL_
-
-_* **Tabela** - campo formado por uma matriz de valores_
-
-
-**Nome da atividade 1**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-| ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
-
-| **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
+| **Comandos**         |  **Destino**                   | **Tipo**          |
+| -------------------- | ------------------------------ | ----------------- |
 | [Nome do botão/link] | Atividade/processo de destino  | (default/cancel  )|
-| ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
+| Entrar               | Página inicial do sistema      | default           |
+| Cadastrar            | Início do proceso de cadastro  |                   |
 
+**Registrar resíduo para coleta**
 
-**Registrar resíduo(s) para coleta**
-
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
+| **Campo**                      | **Tipo**         | **Restrições**                                                 | **Valor default** |
+| ------------------------------ | ---------------- | -------------------------------------------------------------- | ----------------- |
+| [Nome do campo]                | [tipo de dados]  |                                                                |                   |
+| Tipo de Resíduo                | Seleção Única    | Plástico, papel, vidro, metal, resíduos eletrônicos e tetrapak |                   |
+| Quantidade                     | Número           | Número decimal positivo                                        |                   |
+| Unidade de Medida              | Seleção Única    | UN, KG, L e m³                                                 |                   |
+| Data Disponível para Coleta    | Data             |                                                                |                   |
+| Horário Disponível para Coleta | Hora             |                                                                |                   |
+| Observações Adicionais         | Área de Texto    | Máximo de 300 caracteres                                       |                   |
+| CEP                            | Caixa de Texto   | Formato de CEP                                                 |                   |
+| Logradouro                     | Caixa de Texto   |                                                                |                   |
+| Número                         | Número           | Número inteiro positivo                                        |                   |
+| Complemento                    | Caixa de Texto   |                                                                |                   |
+| Bairro                         | Caixa de Texto   |                                                                |                   |
+| Cidade                         | Caixa de Texto   |                                                                |                   |
+| Estado                         | Seleção Única    | Lista dos estados brasileiros                                  |                   |
 
 | **Comandos**         |  **Destino**                                 | **Tipo**          |
 | ---------------------| ---------------------------------------------| ------------------|
-| Registrar            | Publicar demanda de coleta do(s) resíduo(s)  | default           |
+| Registrar            | Publicar demanda de coleta do resíduo        | default           |
 | Cancelar             | Página inicial                               | cancel            |
