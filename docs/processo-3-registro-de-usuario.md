@@ -2,7 +2,7 @@
 
 O Cadastro de Usuário é um dos processos centrais de qualquer sistema que requer autenticação e gestão de acesso. Ele envolve várias etapas, desde a coleta das informações básicas do usuário até a verificação de suas credenciais e a confirmação do email. Este processo garante que os usuários sejam devidamente autenticados e seus dados estejam corretos antes que possam acessar o sistema e seus recursos.
 
-![diagram_1](https://github.com/user-attachments/assets/7ebf8be5-9487-43a5-bf21-4bdc8351cc0b)
+![Exemplo de um Modelo BPMN do PROCESSO 4](./images/processo-3-registro-usuario.jpeg "Modelo BPMN do Processo 4.")
 
 
 
