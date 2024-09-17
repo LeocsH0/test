@@ -108,11 +108,11 @@ Cada um desses processos foi pensado para abordar os principais desafios do seto
 
 [PROCESSO 1 - Registrar Resíduos](processo-1-registrar-residuos.md "Detalhamento do Processo 1.")
 
-[PROCESSO 2 - Realizar Coleta](realizar-coleta.md "Detalhamento do Processo 2.")
+[PROCESSO 2 - Realizar Coleta](processo-2-realizar-coleta.md "Detalhamento do Processo 2.")
 
-[PROCESSO 3 - Nome do Processo](processo-3-nome-do-processo.md "Detalhamento do Processo 3.")
+[PROCESSO 3 - Registro de Usuário](processo-3-registro-de-usuario.md "Detalhamento do Processo 3.")
 
-[PROCESSO 4 - Avaliação](Avaliacao.md "Detalhamento do Processo 4.")
+[PROCESSO 4 - Avaliação](processo-4-Avaliacao.md "Detalhamento do Processo 4.")
 
 ## 4. Projeto da solução
 
