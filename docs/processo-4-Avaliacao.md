@@ -7,4 +7,31 @@ Durante a fase de avaliação será possível que os Coletores avaliem como foi 
 
 #### Detalhamento das atividades
 
-Após a finalização da transação entre ambas as partes, o sistema irá notficá-los que existe uma pendência. Ao entrar no sistema, os produtores de resíduos serão recebidos com uma tela para fornecer a avaliação dos coletores, e os coletores receberam uma tela para avaliar os produtores. Após a conclusão da etapa anterior, os dados serão armazenados no banco de dados do sistema, onde cada usuário terá seu ranking de avaliação sendo calculado através de uma média simples entre número de avaliações e valor avaliado. Os valores coletados serão utilizados no ranqueamento e filtragem descrito nos processos anteriores.
+Após a finalização da transação entre ambas as partes, o sistema seguirá os seguintes passos:
+
+Notificação de Pendência:
+
+O sistema notificará ambas as partes (produtores de resíduos e coletores) que há uma pendência a ser resolvida.
+Tela de Avaliação para Produtores de Resíduos:
+
+Quando os produtores de resíduos entrarem no sistema, eles serão recebidos com uma tela específica.
+Nesta tela, os produtores deverão fornecer uma avaliação dos coletores que participaram da transação.
+Tela de Avaliação para Coletores:
+
+Da mesma forma, os coletores terão uma tela dedicada ao entrar no sistema.
+Nessa tela, os coletores deverão avaliar os produtores de resíduos com quem lidaram.
+Armazenamento e Cálculo dos Dados:
+
+Após a conclusão das avaliações, os dados serão armazenados no banco de dados do sistema.
+Cada usuário (produtores e coletores) terá seu ranking de avaliação calculado.
+O cálculo do ranking será feito com base na média simples entre o número de avaliações recebidas e o valor atribuído nas avaliações.
+Utilização dos Dados:
+
+Os valores coletados das avaliações serão usados para:
+Ranqueamento: Ordenar os usuários com base nas suas avaliações.
+Filtragem: Facilitar a identificação e seleção de usuários de acordo com seu ranking e feedback.
+
+| **Campo**       | **Tipo**         | **Restrições** | 
+| ---             | ---              | ---            |              
+| [Nome do campo] | [tipo de dados]  |                |                   
+| Avaliação           | Selecionável   | pontuação de 1 a 5 |                
