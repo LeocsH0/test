@@ -32,6 +32,5 @@ Ranqueamento: Ordenar os usuários com base nas suas avaliações.
 Filtragem: Facilitar a identificação e seleção de usuários de acordo com seu ranking e feedback.
 
 | **Campo**       | **Tipo**         | **Restrições** | 
-| ---             | ---              | ---            |              
-| [Nome do campo] | [tipo de dados]  |                |                   
+| ---             | ---              | ---            |                                
 | Avaliação           | Selecionável   | pontuação de 1 a 5 |                
