@@ -4,19 +4,19 @@ O projeto ReCiclo visa desenvolver maneiras de coletadores de resíduos reciclá
 
 ## Integrantes
 
+* Ítalo Vitorino Batista Silva
+* João Pedro Vitor de Oliveira
+* Leonardo Cesar da Silva
+* Leonardo Lopes de Vasconcellos Paes
+* Matheus Ferreira Titton
 * Pedro Henrique Barbosa Montandom de Araújo
 * Rafael de Paiva Gomes
-* João Pedro Vitor de Oliveira
-* Italo Vitorino
-* Matheus Ferreira Titton
-* Leonardo Lopes de Vasconcellos Paes
-* Leonardo Cesar da Silva
 
 ## Professor
 
 * Aline Norberta de Brito
-* Cristiano de Macedo Neto
 * Cleia Marcia Gomes Amaral
+* Cristiano de Macêdo Neto
 
 ## Instruções de utilização
 
