@@ -1,6 +1,7 @@
 ### 3.3.3 Processo 3 – Processo de Cadastro de Usuário
 
-O Cadastro de Usuário é um dos processos centrais de qualquer sistema que requer autenticação e gestão de acesso. Ele envolve várias etapas, desde a coleta das informações básicas do usuário até a verificação de suas credenciais e a confirmação do email. Este processo garante que os usuários sejam devidamente autenticados e seus dados estejam corretos antes que possam acessar o sistema e seus recursos.
+
+O diagrama apresenta o processo de cadastro de usuários em um sistema, focado em coleta ou disponibilização de resíduos. O usuário inicia acessando a página de cadastro, onde escolhe o tipo de cadastro e preenche o formulário com informações específicas. Após o preenchimento, o sistema valida as credenciais. Se houver erros ou dados faltantes, o usuário é solicitado a corrigir. Uma vez validado, um e-mail de confirmação é enviado ao usuário. Se o usuário confirmar o e-mail dentro do prazo estipulado, o cadastro é concluído e registrado no sistema. Caso contrário, os dados pendentes são apagados para manter a base de dados limpa e atualizada. Este processo garante uma coleta de informações segura e eficiente, essencial para a gestão adequada dos usuários envolvidos com resíduos.
 
 ![Exemplo de um Modelo BPMN do PROCESSO 4](./images/processo-3-registro-usuario.jpeg "Modelo BPMN do Processo 4.")
 
@@ -8,55 +9,12 @@ O Cadastro de Usuário é um dos processos centrais de qualquer sistema que requ
 
 #### Detalhamento das atividades
 
-A Atividade de Cadastro de Usuário pode ser dividida nas seguintes subetapas:
+O processo ilustrado no diagrama detalha as etapas para o cadastro de usuários em um sistema digital, enfocando a coleta e disponibilização de resíduos. A jornada do usuário começa com o acesso à página de cadastro e a escolha do tipo de cadastro: como coletor ou disponibilizador de resíduo. O usuário então preenche um formulário com dados específicos ao tipo de cadastro selecionado. Esta etapa é crucial, pois as informações fornecidas são verificadas para autenticidade e precisão.
 
-1. Início do Processo
-O processo de cadastro se inicia quando um usuário acessa a página de cadastro no sistema e escolhe começar o registro. Este ponto de partida dispara a sequência de ações que serão descritas a seguir.
+Uma vez submetido, o sistema executa uma validação das credenciais. Se as informações estiverem corretas, o processo segue; caso contrário, o sistema notifica o usuário para corrigir dados errados ou fornecer informações faltantes. Essa verificação é fundamental para manter a integridade e a segurança dos dados no sistema.
 
-2. Preenchimento do Formulário de Cadastro
-A primeira ação do usuário é o preenchimento do formulário de cadastro. Este formulário deve coletar informações essenciais, incluindo:
+Após a aprovação da validação, o usuário é instruído a confirmar os dados por meio de um e-mail enviado pelo sistema. Este passo adiciona uma camada extra de segurança, assegurando que o endereço de e-mail fornecido é válido e que o usuário tem acesso a ele. O usuário precisa confirmar o cadastro através do link enviado dentro de um prazo definido. Se o usuário não confirmar o e-mail, o sistema automaticamente apaga os dados pendentes do banco de dados, o que ajuda a manter a base de dados limpa e atualizada.
 
-Nome Completo: O nome do usuário.
-CPF ou CNPJ: Documento de identificação pessoal ou empresarial.
-Email: O email do usuário, que será usado para enviar a confirmação.
-Telefone: Informações de contato.
-Senha: O usuário deve escolher uma senha que atenda aos requisitos de segurança do sistema.
-3. Escolha do Tipo de Cadastro
-O usuário deverá selecionar o tipo de cadastro:
+Finalmente, uma vez que o e-mail é confirmado, o cadastro do usuário é concluído e seus dados são armazenados no banco de dados de cadastros concluídos. Este processo não só facilita a organização e a administração eficiente dos usuários mas também assegura que todas as informações sejam coletadas e verificadas de forma sistemática, reduzindo erros e garantindo a conformidade com as normas de segurança de dados.
 
-Disponibilizador de Resíduos: Indica que o usuário é responsável por disponibilizar resíduos. Nessa escolha, ele deverá fornecer o endereço onde o resíduo será disponibilizado.
-Coletor de Resíduos: Se o usuário for um coletor de resíduos, ele deverá fornecer informações sobre a sua área de atuação, ou seja, a região em que ele opera.
-Essa distinção entre os perfis de usuário garante que o sistema adapte suas funcionalidades de acordo com o papel de cada usuário na cadeia de gestão de resíduos.
-
-4. Validação Inicial das Credenciais
-Após o preenchimento do formulário, o sistema realiza uma validação inicial dos dados inseridos. O objetivo desta etapa é verificar se os campos obrigatórios estão corretamente preenchidos e se as informações fornecidas são válidas. Alguns pontos checados:
-
-Formato do CPF/CNPJ: O sistema valida se o documento fornecido segue o formato correto e é válido.
-Email: Verificação de formato e existência do domínio do email.
-Telefone: Validação do formato do número de telefone.
-Se algum dos dados estiver incorreto, o usuário será notificado para realizar as correções necessárias. Se todos os dados estiverem corretos, o processo segue adiante.
-
-5. Envio do Formulário
-Após a validação inicial, o usuário envia o formulário completo. Este é o ponto em que todas as informações fornecidas são transmitidas ao servidor do sistema para validações mais detalhadas.
-
-6. Validação Final dos Dados
-O sistema realiza uma validação final dos dados, garantindo que:
-
-Todos os campos obrigatórios foram preenchidos.
-Os dados fornecidos estão consistentes e dentro dos parâmetros permitidos pelo sistema (por exemplo, uma senha forte).
-O CPF ou CNPJ é único no banco de dados, impedindo cadastros duplicados.
-Caso haja algum erro ou informação faltando, o sistema notifica o usuário e solicita a correção dos dados.
-
-7. Envio de Email de Confirmação
-Com os dados validados, o sistema envia um email de confirmação para o endereço de email fornecido pelo usuário. O email contém um link de ativação que o usuário deve clicar para confirmar seu endereço de email e ativar sua conta.
-
-Essa etapa é crucial para garantir que o email fornecido é válido e pertence ao usuário.
-
-8. Confirmação do Email pelo Usuário
-O usuário precisa acessar o email e clicar no link de confirmação. Esse link redireciona o usuário para o sistema, que marca o email como confirmado e prossegue para a ativação da conta.
-
-9. Registro do Usuário no Sistema
-Após a confirmação do email, o sistema registra o usuário como ativo no banco de dados. A partir desse momento, o usuário é oficialmente cadastrado e pode acessar o sistema com suas credenciais (email e senha).
-
-10. Fim do Processo
-Com o usuário devidamente cadastrado e ativo, o processo é finalizado. O usuário agora pode utilizar o sistema, seja como coletor ou como disponibilizador de resíduos, dependendo da escolha feita durante o cadastro.
+Este fluxo de cadastro é exemplar para sistemas que requerem uma alta confiabilidade nas informações dos usuários, especialmente em contextos que lidam com gestão de resíduos, onde a precisão e a confiabilidade são críticas.
