@@ -2,9 +2,7 @@
 
 ### 4.1. Modelo de dados
 
-_Apresente o modelo de dados por meio de um modelo relacional que contemple todos os conceitos e atributos apresentados na modelagem dos processos._ 
-
-![Exemplo de um modelo relacional](images/modeloRelacional.png "Exemplo de Modelo Relacional.")
+![Modelo inicial](images/banco-de-dados.png "Banco de dados")
 ---
 
 ### 4.2. Tecnologias
