@@ -14,14 +14,12 @@ em contato e, então, registrando as interações entre as duas partes para a at
 **Login**
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
 | login           | Caixa de Texto   | formato de e-mail |                |
 | senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
 
 | **Comandos**         |  **Destino**                           |     **Tipo**      |
 | ---                  | ---                                    | ---               |
-| [Nome do botão/link] | Atividade/processo de destino          | (default/cancel ) |
-| entrar               | Início do processo de solicitar coleta | default           |
+| entrar               | Início do processo de solicitar coleta |                   |
 | cadastrar            | Início do proceso de cadastro          |                   |
 
 
@@ -29,23 +27,19 @@ em contato e, então, registrando as interações entre as duas partes para a at
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
 |       -         |        -         |       -        |       -           |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/) |
-|        Solicitar     | Avisar produtor do interesse de coletar |  default |
+|        Solicitar     | Avisar produtor do interesse de coletar |          |
 
 **Aceitar/Recusar coleta**
 
 | **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
 | ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
 |       -         |        -         |       -        |       -           |
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/) |
 |        Aceitar       | Avisar coletor do aceite       |  default          |
 |        Recusar       | Avisar coletor da recusa       |  cancel           |
