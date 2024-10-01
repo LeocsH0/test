@@ -1,19 +1,18 @@
 # ReCiclo
 
+**Ítalo Vitorino Batista Silva, italo.vitorinobs@hotmail.com**
+
+**João Pedro Vitor de Oliveira, joao.pvo44@gmail.com**
+
+**Leonardo Cesar da Silva, le0c3sar@gmail.com**
+
+**Leonardo Lopes de Vasconcelos Paes, leolpaes@gmail.com**
+
+**Matheus Ferreira Titton, matheustitton@gmail.com**
 
 **Pedro Henrique Barbosa Montandon de Araujo, pedrobarbosa89@gmail.com**
 
 **Rafael de Paiva Gomes, rafaeldepaivagomes@outlook.com**
-
-**João Pedro Vitor de Oliveira, joao.pvo44@gmail.com**
-
-**Italo Vitorino Batista Silva, italo.vitorinobs@hotmail.com**
-
-**Leonardo Lopes de Vasconcelos Paes, leolpaes@gmail.com**
-
-**Leonardo Cesar da Silva, le0c3sar@gmail.com**
-
-**Matheus Ferreira Titton, matheustitton@gmail.com**
 
 ---
 
@@ -21,9 +20,9 @@ Professores:
 
 ** Aline Norberta de Brito **
 
-** Cristiano de Macedo Neto **
-
 ** Cleia Marcia Gomes Amaral **
+
+** Cristiano de Macedo Neto **
 
 ---
 
@@ -106,7 +105,7 @@ Cada um desses processos foi pensado para abordar os principais desafios do seto
 
 ### 3.3. Modelagem dos processos
 
-[PROCESSO 1 - Registrar Resíduos](processo-1-registrar-residuos.md "Detalhamento do Processo 1.")
+[PROCESSO 1 - Registrar Resíduos](processo-1-gestao-de-residuos.md "Detalhamento do Processo 1.")
 
 [PROCESSO 2 - Realizar Coleta](processo-2-realizar-coleta.md "Detalhamento do Processo 2.")
 
