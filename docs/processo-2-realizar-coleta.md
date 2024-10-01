@@ -41,5 +41,5 @@ em contato e, então, registrando as interações entre as duas partes para a at
 
 | **Comandos**         |  **Destino**                   | **Tipo**          |
 | ---                  | ---                            | ---               |
-|        Aceitar       | Avisar coletor do aceite       |  default          |
+|        Aceitar       | Avisar coletor do aceite       |                   |
 |        Recusar       | Avisar coletor da recusa       |  cancel           |
