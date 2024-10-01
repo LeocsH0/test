@@ -13,7 +13,7 @@ Se em algum momento o usuário desejar alterar suas informações, ele poderá f
 
 #### Detalhamento das atividades
 
-Aqui está o detalhamento formatado de forma semelhante ao da imagem que você forneceu:
+
 
 ---
 
