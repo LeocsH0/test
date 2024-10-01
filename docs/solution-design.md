@@ -42,7 +42,7 @@ Essas tecnologias proporcionarão uma aplicação robusta, escalável e de fáci
 
 | **Dimensão**   | **Tecnologia**  |
 | ---            | ---             |
-| SGBD           | MySQL           |
+| SGBD           | MariaDB          |
 | Front end      | HTML+CSS+JS     |
 | Back end       | Java SpringBoot |
 | Deploy         | Github Pages    |
