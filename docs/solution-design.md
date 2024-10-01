@@ -2,7 +2,7 @@
 
 ### 4.1. Modelo de dados
 
-![Modelo inicial](images/banco-de-dados.png "Banco de dados")
+![Modelo inicial](images/ReCiclo_Diagrama_V3.drawio.png "Banco de dados")
 ---
 
 ### 4.2. Tecnologias
