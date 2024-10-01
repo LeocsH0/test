@@ -105,7 +105,7 @@ Cada um desses processos foi pensado para abordar os principais desafios do seto
 
 ### 3.3. Modelagem dos processos
 
-[PROCESSO 1 - Gestão de Resíduo](processo-1-gestao-de-residuos.md "Detalhamento do Processo 1.")
+[PROCESSO 1 - Gestão de Resíduos](processo-1-gestao-de-residuos.md "Detalhamento do Processo 1.")
 
 [PROCESSO 2 - Realizar Coleta](processo-2-realizar-coleta.md "Detalhamento do Processo 2.")
 
