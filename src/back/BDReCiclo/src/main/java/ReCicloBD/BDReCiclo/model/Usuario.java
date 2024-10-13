@@ -20,9 +20,7 @@ public class Usuario {
         this.celular = celular;
         this.email = email;
         this.tipo = tipo;
-        Coleta[] coletas = new Coleta[MAX_COLETAS];
-        Residuo[] residuos = new Residuo[MAX_RESIDUOS];
-    }
+        }
 
     public Coleta realizarColeta(Coleta coleta){
         for (int i = 0; i < MAX_COLETAS; i++){
@@ -44,7 +42,7 @@ public class Usuario {
             } 
         }
         return null;
-    }   
+    }
 
     private String dadosUsuario(){ // Obtem dados do usuarios para 
 
