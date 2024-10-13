@@ -1,13 +1,13 @@
-package ReCicloBD.BDReCiclo;
+package br.com.reciclo.reciclo_backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BdReCicloApplication {
+public class RecicloBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BdReCicloApplication.class, args);
+		SpringApplication.run(RecicloBackendApplication.class, args);
 	}
 
 }
