@@ -1,11 +1,7 @@
 package br.com.reciclo.reciclo_backend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import br.com.reciclo.reciclo_backend.model.enums.TipoUsuario;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
@@ -27,12 +23,13 @@ public class Usuarios {
     @Column
     private String cellphone;
 
+    @Enumerated(EnumType.STRING)
     @Column
-    private String type;
+    private TipoUsuario type;
 
     public Usuarios(){}
 
-    public Usuarios(String name, String password, String email, String cellphone, String type){
+    public Usuarios(String name, String password, String email, String cellphone, TipoUsuario type){
         this.name = name;
         this.email = email;
         this.password = password;
@@ -80,11 +77,11 @@ public class Usuarios {
         this.cellphone = cellphone;
     }
 
-    public String getType(){
+    public TipoUsuario getType(){
         return this.type;
     }
 
-    public void setType(String type){
+    public void setType(TipoUsuario type){
         this.type = type;
     }
 
