@@ -1,11 +1,18 @@
 package br.com.reciclo.reciclo_backend.model;
 
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import br.com.reciclo.reciclo_backend.model.enums.TipoUsuario;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
-public class Usuarios {
+public class Usuarios implements UserDetails{
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -83,6 +90,20 @@ public class Usuarios {
 
     public void setType(TipoUsuario type){
         this.type = type;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        if (this.type == TipoUsuario.ADMIN) {
+            return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
+        }else {
+            return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+        }
+    }
+
+    @Override
+    public String getUsername() {
+        return this.email;
     }
 
 }
