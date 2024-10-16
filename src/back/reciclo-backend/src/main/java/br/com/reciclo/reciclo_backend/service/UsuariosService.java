@@ -13,19 +13,6 @@ public class UsuariosService {
     @Autowired
     private UsuariosRepository userRepository;
 
-    public Usuarios criarUsuario(Usuarios userRequestDto){
-        Usuarios userResponse = null;
-        Usuarios user = new Usuarios(userRequestDto.getName(), userRequestDto.getPassword(), userRequestDto.getEmail(), userRequestDto.getCellphone(), userRequestDto.getType());
-
-        try {
-            userResponse  = this.userRepository.save(user);
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-        
-        return userResponse;
-    }
-
     public List<Usuarios> buscarUsuarios(){
         List<Usuarios> users = null;
 
