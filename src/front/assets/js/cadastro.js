@@ -27,7 +27,7 @@ async function handleRegister(event) {
             name: name,
             cellphone: cellphone,
             password: password,
-            userTypeId: radioButtonValue
+            type: radioButtonValue
         }
 
         await autenticacaoService.cadastrar(userData);
