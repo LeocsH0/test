@@ -1,37 +1,70 @@
 package br.com.reciclo.reciclo_backend.controller;
 
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.PersistenceUnit;
+import br.com.reciclo.reciclo_backend.model.Coleta;
+import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
+import br.com.reciclo.reciclo_backend.service.ColetaService;
+
+
 
 @RestController
+@RequestMapping("/api/v1/coletas")
 public class ColetaController {
-    @PersistenceUnit
-    EntityManagerFactory factory;
+    
+    @Autowired
+    private ColetaService coletaService;
 
-    @PostMapping("/api/v1/coletas")
-    public @ResponseBody Coleta cadastrarColeta(@RequestParam,){
-        EntityManager manager = factory.createEntityManager();
-        Coleta novColeta = new Coleta();
-
-        manager.getTransaction().begin();
-        manager.persist(novColeta);
-        manager.getTransaction().commit();
-
-        return novColeta; // OU DTO
+    @PutMapping("/requisitar/{coletorId}/{coletaId}")
+    public ResponseEntity<?> requisitarColeta(@PathVariable Long coletorId, @PathVariable Long coletaId){
+        ColetaDTO coleta = coletaService.requisitarColeta(coletorId, coletaId);
+        if (coleta == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Coleta ou coletor não encontrada");
+        }
+        return ResponseEntity.ok(coleta);
     }
 
-    @GetMapping("/api/v1/coletas/{id}")
-    public @ResponseBody Coleta buscarColeta(@PathVariable int id){
-        EntityManager manager = factory.createEntityManager();
-        Coleta coleta = manager.find(Coleta.class, id);
+    @PutMapping("/aceitar/{reposta}/{coletaId}")
+    public ResponseEntity<?> aceitarDemanda(@PathVariable Boolean resposta, @PathVariable Long coletaId){
+        ColetaDTO coleta = coletaService.aceitarDemanda(resposta, coletaId);
+        if (coleta == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Coleta não encontrada");
+        }
+        return ResponseEntity.ok(coleta);
     }
 
+    @PutMapping("/entrega/{resposta}/{coletaId}")
+    public ResponseEntity<?> entregaColeta(@PathVariable Boolean resposta, @PathVariable Long coletaId){
+        if (!(resposta instanceof Boolean)){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Reposta deve ser um Booleano");        }
+        ColetaDTO coleta = coletaService.entregaColeta(resposta, coletaId);
+        if (coleta == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Coleta não encontrada");
+        }
+        return ResponseEntity.ok(coleta);
+    }
+
+    
+    @GetMapping
+    public ResponseEntity<?> listarColetas(){
+        List<ColetaDTO> coletas = coletaService.listarColetas();
+        return ResponseEntity.ok(coletas);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> buscarColeta(@PathVariable Long coletaId){
+        Coleta coleta = coletaService.buscarColeta(coletaId);
+        ColetaDTO dto = coleta.toDTO();
+        return ResponseEntity.ok(dto);
+    }
 }
