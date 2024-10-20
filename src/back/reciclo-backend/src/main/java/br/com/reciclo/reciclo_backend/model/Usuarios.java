@@ -1,5 +1,6 @@
 package br.com.reciclo.reciclo_backend.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -94,11 +95,20 @@ public class Usuarios implements UserDetails{
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+
         if (this.type == TipoUsuario.ADMIN) {
-            return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
-        }else {
-            return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+            authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+            authorities.add(new SimpleGrantedAuthority("ROLE_PRODUTOR"));
+            authorities.add(new SimpleGrantedAuthority("ROLE_COLETOR"));
+        } else if (this.type == TipoUsuario.COLETOR) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_COLETOR"));
+        }else if (this.type == TipoUsuario.PRODUTOR) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_PRODUTOR"));
         }
+
+        return authorities;
     }
 
     @Override

@@ -9,5 +9,5 @@ import br.com.reciclo.reciclo_backend.model.Usuarios;
 
 @Repository
 public interface UsuariosRepository extends JpaRepository<Usuarios, Long> {
-    UserDetails findByEmail(String email);
+    Usuarios findByEmail(String email);
 }
