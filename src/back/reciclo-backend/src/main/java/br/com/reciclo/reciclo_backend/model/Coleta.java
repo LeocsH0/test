@@ -27,11 +27,11 @@ public class Coleta {
 
     @OneToOne
     @JoinColumn(name = "produtor_id", nullable = false)
-    private Long produtor;
+    private Usuarios produtor;
 
     @OneToOne
     @JoinColumn(name = "coletor_id", nullable = true)
-    private Long coletor;
+    private Usuarios coletor;
 
     @Enumerated(EnumType.STRING)
     @Column
@@ -45,13 +45,13 @@ public class Coleta {
     private String codigoSeguranca;
 
     @Column(name = "residuo_id", nullable = false, unique = true)
-    private int residuoId;
+    private Long residuoId;
 
     @Column
     private LocalDate data;
 
-    public Coleta(Long produtorId, Integer residuoId){
-        this.produtor = produtorId;
+    public Coleta(Usuarios produtor, Long residuoId){
+        this.produtor = produtor;
         this.coletor = null;
         this.status = StatusColeta.DISPONIVEL;
         // TODO: implementar código de segurança
@@ -60,8 +60,8 @@ public class Coleta {
         this.data = LocalDate.now();
     }
 
-    public boolean requisitarColeta(Long coletorId){
-        this.coletor = coletorId;
+    public boolean requisitarColeta(Usuarios coletor){
+        this.coletor = coletor;
         this.status = StatusColeta.REQUISITADO;
         return true;
     }

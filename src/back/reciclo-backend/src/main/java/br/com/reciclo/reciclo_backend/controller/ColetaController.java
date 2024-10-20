@@ -30,7 +30,7 @@ public class ColetaController {
     private ColetaService coletaService;
 
     @PostMapping("/cadastrar/{produtorId}/{residuoId}")
-    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId, int residuoId){
+    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId, Long residuoId){
         ColetaDTO novColeta = coletaService.cadastrarColeta(produtorId, residuoId);
         return ResponseEntity.ok(novColeta);
     }

@@ -23,8 +23,10 @@ public class ColetaService {
         this.usuariosRepository = usuariosRepository;
     }
 
-    public ColetaDTO cadastrarColeta(Long produtorId, int residuoId){
-        Coleta novColeta = new Coleta(produtorId, residuoId);
+    public ColetaDTO cadastrarColeta(Long produtorId, Long residuoId){
+        Optional<Usuarios> usuarioOptional = this.usuariosRepository.findById(produtorId);
+        Usuarios produtor = usuarioOptional.get();
+        Coleta novColeta = new Coleta(produtor, residuoId);
         this.coletaRepository.save(novColeta);
         return novColeta.toDTO();
     }
@@ -35,7 +37,8 @@ public class ColetaService {
         if (coleta == null || usuarioOptional.isEmpty()) {
             return null;
         }
-        coleta.requisitarColeta(coletorId); 
+        Usuarios coletor = usuarioOptional.get();
+        coleta.requisitarColeta(coletor); 
         this.coletaRepository.save(coleta);
         return coleta.toDTO();
     }
