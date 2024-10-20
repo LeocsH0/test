@@ -23,6 +23,6 @@ public class ColetaService {
             System.out.println("Error: " + e.getMessage());
         }
         
-        return coletaResponse;
+        return coletaResponse
     }
 }
