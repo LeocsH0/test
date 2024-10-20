@@ -1,15 +1,19 @@
 package br.com.reciclo.reciclo_backend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import br.com.reciclo.reciclo_backend.model.enums.TipoUsuario;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
-public class Usuarios {
+public class Usuarios implements UserDetails{
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,12 +31,13 @@ public class Usuarios {
     @Column
     private String cellphone;
 
+    @Enumerated(EnumType.STRING)
     @Column
-    private String type;
+    private TipoUsuario type;
 
     public Usuarios(){}
 
-    public Usuarios(String name, String password, String email, String cellphone, String type){
+    public Usuarios(String name, String password, String email, String cellphone, TipoUsuario type){
         this.name = name;
         this.email = email;
         this.password = password;
@@ -80,12 +85,35 @@ public class Usuarios {
         this.cellphone = cellphone;
     }
 
-    public String getType(){
+    public TipoUsuario getType(){
         return this.type;
     }
 
-    public void setType(String type){
+    public void setType(TipoUsuario type){
         this.type = type;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+
+        if (this.type == TipoUsuario.ADMIN) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+            authorities.add(new SimpleGrantedAuthority("ROLE_PRODUTOR"));
+            authorities.add(new SimpleGrantedAuthority("ROLE_COLETOR"));
+        } else if (this.type == TipoUsuario.COLETOR) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_COLETOR"));
+        }else if (this.type == TipoUsuario.PRODUTOR) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_PRODUTOR"));
+        }
+
+        return authorities;
+    }
+
+    @Override
+    public String getUsername() {
+        return this.email;
     }
 
 }
