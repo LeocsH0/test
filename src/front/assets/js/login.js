@@ -2,6 +2,12 @@ import { AutenticacaoService } from "../../service/autenticacao-service.js";
 
 const autenticacaoService = new AutenticacaoService();
 
+const rotas = {
+    admin: "views/admin/dashboard.html",
+    produtor: "views/produtor/meus-residuos.html",
+    coletor: "views/coletor/coletas.html"
+}
+
 function observerSubmitForm() {
     const formLogin = document.getElementById("login_form");
     formLogin.addEventListener('submit', handleLogin)
@@ -20,10 +26,12 @@ async function handleLogin(event) {
         }
 
         const response = await autenticacaoService.login(userLogin);
-
         autenticacaoService.setToken(response.token);
 
-        window.location.href = 'views/teste.html'; 
+        const token = jwt_decode(response.token);
+        autenticacaoService.setTipoUsuario(token.type);
+
+        window.location.href = rotas[token.type]; 
 
     } catch (error) {
         alert(error.message)

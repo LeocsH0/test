@@ -49,4 +49,12 @@ export class AutenticacaoService {
     async getToken(){
         localStorage.getItem('token');
     }
+
+    async setTipoUsuario(userType){
+        localStorage.setItem('userType', userType);
+    }
+
+    async getTipoUsuario(){
+        localStorage.getItem('userType');
+    }
 }
