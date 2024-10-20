@@ -26,6 +26,7 @@ public class TokenService {
             String token = JWT.create()
                 .withIssuer("reciclo-api")
                 .withSubject(user.getEmail())
+                .withClaim("type", user.getType().getTipo())
                 .withExpiresAt(generateExpirationDate())
                 .sign(algorithm);
 

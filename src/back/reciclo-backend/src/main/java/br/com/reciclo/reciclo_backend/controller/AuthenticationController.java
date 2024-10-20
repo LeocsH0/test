@@ -20,7 +20,7 @@ import br.com.reciclo.reciclo_backend.respositories.UsuariosRepository;
 import br.com.reciclo.reciclo_backend.security.TokenService;
 
 @RestController
-@RequestMapping("api/v1/auth")
+@RequestMapping("/api/v1/auth")
 public class AuthenticationController {
 
     @Autowired
