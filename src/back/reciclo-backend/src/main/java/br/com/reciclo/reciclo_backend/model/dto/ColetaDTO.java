@@ -5,10 +5,21 @@ import br.com.reciclo.reciclo_backend.model.enums.StatusColeta;
 public record ColetaDTO(
     Long id,
     UserDetailResponseDTO produtor,
-    UserDetailResponseDTO colertor,
+    UserDetailResponseDTO coletor,
     // Residuo residuo,
-    StatusColeta status
+    StatusColeta status){
 
-    ) {
+    public long getId(){
+        return id;
+    }
+
+    public UserDetailResponseDTO getProdutor(){
+        return produtor;
+    }
+
+    public UserDetailResponseDTO getColetor(){
+        return coletor;
+    }
+}
     
-};
+
