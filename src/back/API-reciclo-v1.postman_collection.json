@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "c8b45599-4b20-46fb-9b58-f6bccdd29d42",
+		"name": "API v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29149926",
+		"_collection_link": "https://reciclo.postman.co/workspace/ReCiclo~b13976f8-d9e7-4bb6-baee-5f5035b2d399/collection/29149926-c8b45599-4b20-46fb-9b58-f6bccdd29d42?action=share&source=collection_link&creator=29149926"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Todos Usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpvYW8uY29sZXRvckB0ZXN0ZS5jb20iLCJleHAiOjE3Mjk0MDMzNzl9.hEjVUlkSRmB812fWT4FmKHJIs3hABZg06-xRlHmaZ9E"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsImV4cCI6MTcyOTQwNDM0OH0.AqQ3eqJehZlvx-DyX_7_bOS8OKpEGM9fU7Nvh5ymZXU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/usuarios/detail"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jpvdo@yahoo.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Joao Pedro\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"jpvdo@yahoo.com\",\r\n    \"cellphone\": \"31975881152\",\r\n    \"type\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/auth/register"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
