@@ -20,8 +20,7 @@ export class UserService {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${this.token}`
             }
-        }
-        );
+        });
   
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -31,13 +30,13 @@ export class UserService {
         return users;
     }
   
-    async getUserByEmail(email) {
-        const response = await fetch(`${this.urlBase}?email=${email}`,
-            {
+    async getUserDetail() {
+        const response = await fetch(`${this.urlBase}/detail`, {
+            headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${this.token}`
             }
-        );
+        });
     
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
