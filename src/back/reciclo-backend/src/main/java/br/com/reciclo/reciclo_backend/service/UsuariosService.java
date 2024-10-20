@@ -1,28 +1,42 @@
 package br.com.reciclo.reciclo_backend.service;
 
+import br.com.reciclo.reciclo_backend.model.dto.UserDetailResponseDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import br.com.reciclo.reciclo_backend.model.Usuarios;
 import br.com.reciclo.reciclo_backend.respositories.UsuariosRepository;
 
+import java.util.List;
+
 @Service
 public class UsuariosService {
-    private final UsuariosRepository userRepository;
+    @Autowired
+    private UsuariosRepository userRepository;
 
-    public UsuariosService(UsuariosRepository userRepository){
-        this.userRepository = userRepository;
-    }
-
-    public Usuarios criarUsuario(Usuarios userRequestDto){
-        Usuarios userResponse = null;
-        Usuarios user = new Usuarios(userRequestDto.getName(), userRequestDto.getPassword(), userRequestDto.getEmail(), userRequestDto.getCellphone(), userRequestDto.getType());
+    public List<Usuarios> buscarUsuarios(){
+        List<Usuarios> users = null;
 
         try {
-            userResponse  = this.userRepository.save(user);
-        } catch (Exception e) {
+            users = this.userRepository.findAll();
+        } catch (Exception e){
             System.out.println("Error: " + e.getMessage());
         }
-        
+
+        return users;
+    }
+
+    public UserDetailResponseDTO buscarUsuariosPorEmail(String email){
+        UserDetailResponseDTO userResponse = null;
+
+        try{
+            Usuarios user = this.userRepository.findByEmail(email);
+            userResponse = new UserDetailResponseDTO(user.getName(), user.getEmail(), user.getCellphone(), user.getType());
+        } catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+        }
+
         return userResponse;
     }
 }
