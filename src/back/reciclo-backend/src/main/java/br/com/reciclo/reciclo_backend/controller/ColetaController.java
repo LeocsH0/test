@@ -6,10 +6,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.reciclo.reciclo_backend.model.Coleta;
@@ -24,6 +28,12 @@ public class ColetaController {
     
     @Autowired
     private ColetaService coletaService;
+
+    @PostMapping("/cadastrar/{produtorId}/{residuoId}")
+    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId, int residuoId){
+        ColetaDTO novColeta = coletaService.cadastrarColeta(produtorId, residuoId);
+        return ResponseEntity.ok(novColeta);
+    }
 
     @PutMapping("/requisitar/{coletorId}/{coletaId}")
     public ResponseEntity<?> requisitarColeta(@PathVariable Long coletorId, @PathVariable Long coletaId){
@@ -54,7 +64,6 @@ public class ColetaController {
         return ResponseEntity.ok(coleta);
     }
 
-    
     @GetMapping
     public ResponseEntity<?> listarColetas(){
         List<ColetaDTO> coletas = coletaService.listarColetas();
@@ -66,5 +75,10 @@ public class ColetaController {
         Coleta coleta = coletaService.buscarColeta(coletaId);
         ColetaDTO dto = coleta.toDTO();
         return ResponseEntity.ok(dto);
+    }
+
+    @DeleteMapping("/delete/{coletaId}")
+    public @ResponseBody Boolean deletarColeta(@PathVariable Long coletaId){
+        return coletaService.deletarColeta(coletaId);
     }
 }

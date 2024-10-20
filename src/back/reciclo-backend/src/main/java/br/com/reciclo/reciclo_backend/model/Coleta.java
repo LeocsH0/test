@@ -8,6 +8,8 @@ import br.com.reciclo.reciclo_backend.model.enums.StatusColeta;
 import br.com.reciclo.reciclo_backend.model.enums.TipoUsuario;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,12 +27,13 @@ public class Coleta {
 
     @OneToOne
     @JoinColumn(name = "produtor_id", nullable = false)
-    private Usuarios produtor;
+    private Long produtor;
 
     @OneToOne
     @JoinColumn(name = "coletor_id", nullable = true)
-    private Usuarios coletor;
+    private Long coletor;
 
+    @Enumerated(EnumType.STRING)
     @Column
     private StatusColeta status;
 
@@ -41,21 +44,24 @@ public class Coleta {
     @Column(name = "codigo_seguranca", nullable = false)
     private String codigoSeguranca;
 
+    @Column(name = "residuo_id", nullable = false, unique = true)
+    private int residuoId;
+
     @Column
     private LocalDate data;
 
-    public Coleta(Usuarios produtor, Integer residuo_id){
-        this.produtor = produtor;
+    public Coleta(Long produtorId, Integer residuoId){
+        this.produtor = produtorId;
         this.coletor = null;
         this.status = StatusColeta.DISPONIVEL;
         // TODO: implementar código de segurança
         this.codigoSeguranca = "teste";
-        // this.residuoId = residuoId;
+        this.residuoId = residuoId;
         this.data = LocalDate.now();
     }
 
-    public boolean requisitarColeta(Usuarios coletor){
-        this.coletor = coletor;
+    public boolean requisitarColeta(Long coletorId){
+        this.coletor = coletorId;
         this.status = StatusColeta.REQUISITADO;
         return true;
     }

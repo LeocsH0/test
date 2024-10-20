@@ -23,9 +23,11 @@ public class ColetaService {
         this.usuariosRepository = usuariosRepository;
     }
 
-    // public Coleta criarColeta(Usuarios produtor, int residuo_id){
-        
-    // }
+    public ColetaDTO cadastrarColeta(Long produtorId, int residuoId){
+        Coleta novColeta = new Coleta(produtorId, residuoId);
+        this.coletaRepository.save(novColeta);
+        return novColeta.toDTO();
+    }
 
     public ColetaDTO requisitarColeta(Long coletorId, Long coletaId){
         Coleta coleta = buscarColeta(coletaId);
@@ -33,8 +35,7 @@ public class ColetaService {
         if (coleta == null || usuarioOptional.isEmpty()) {
             return null;
         }
-        Usuarios coletor = usuarioOptional.get();
-        coleta.requisitarColeta(coletor); 
+        coleta.requisitarColeta(coletorId); 
         this.coletaRepository.save(coleta);
         return coleta.toDTO();
     }
@@ -61,6 +62,16 @@ public class ColetaService {
             coletasDTO.add(dto);
         }
         return coletasDTO;
+    }
+
+    public boolean deletarColeta(Long coletaId){
+        this.coletaRepository.deleteById(coletaId);
+        Coleta coleta = buscarColeta(coletaId);
+        Boolean resposta = false;
+        if (coleta == null){
+            resposta = true;
+        }
+        return resposta;
     }
 
     public Coleta buscarColeta(Long coletaId){
