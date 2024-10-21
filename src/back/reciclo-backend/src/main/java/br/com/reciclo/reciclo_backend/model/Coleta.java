@@ -41,6 +41,9 @@ public class Coleta {
     // @JoinColumn(name = "residuo_id", nullable = false)
     // private Residuo residuoId
 
+    @OneToOne(mappedBy = "coleta")
+    private Endereco endereco;
+
     @Column(name = "codigo_seguranca", nullable = false)
     private String codigoSeguranca;
 
