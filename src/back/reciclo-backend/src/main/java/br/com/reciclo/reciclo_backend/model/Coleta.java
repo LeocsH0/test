@@ -16,11 +16,11 @@ public class Coleta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "produtor_id", nullable = false)
     private Usuarios produtor;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "coletor_id", nullable = true)
     private Usuarios coletor;
 
