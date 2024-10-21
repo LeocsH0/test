@@ -12,15 +12,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.reciclo.reciclo_backend.model.Coleta;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.service.ColetaService;
-
-
 
 @RestController
 @RequestMapping("/api/v1/coletas")
@@ -30,7 +27,7 @@ public class ColetaController {
     private ColetaService coletaService;
 
     @PostMapping("/cadastrar/{produtorId}/{residuoId}")
-    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId, Long residuoId){
+    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId, @PathVariable Long residuoId){
         ColetaDTO novColeta = coletaService.cadastrarColeta(produtorId, residuoId);
         return ResponseEntity.ok(novColeta);
     }

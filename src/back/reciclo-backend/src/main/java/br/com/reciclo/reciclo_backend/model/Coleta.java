@@ -60,6 +60,8 @@ public class Coleta {
         this.data = LocalDate.now();
     }
 
+    public Coleta() {}
+
     public boolean requisitarColeta(Usuarios coletor){
         this.coletor = coletor;
         this.status = StatusColeta.REQUISITADO;
