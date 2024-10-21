@@ -6,16 +6,7 @@ import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.UserDetailResponseDTO;
 import br.com.reciclo.reciclo_backend.model.enums.StatusColeta;
 import br.com.reciclo.reciclo_backend.model.enums.TipoUsuario;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "coletas")
@@ -25,11 +16,11 @@ public class Coleta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "produtor_id", nullable = false)
     private Usuarios produtor;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "coletor_id", nullable = true)
     private Usuarios coletor;
 
@@ -40,6 +31,9 @@ public class Coleta {
     // @OneToOne
     // @JoinColumn(name = "residuo_id", nullable = false)
     // private Residuo residuoId
+
+    @OneToOne(mappedBy = "coleta", cascade = CascadeType.ALL)
+    private Endereco endereco;
 
     @Column(name = "codigo_seguranca", nullable = false)
     private String codigoSeguranca;
@@ -61,6 +55,10 @@ public class Coleta {
     }
 
     public Coleta() {}
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 
     public boolean requisitarColeta(Usuarios coletor){
         this.coletor = coletor;
