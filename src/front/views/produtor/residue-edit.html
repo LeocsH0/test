@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Resíduo</title>
+  <link rel="stylesheet" href="/src/front/assets/css/produtor/residue-deti.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Editar Resíduo</h1>
+    <form id="editResidueForm">
+      <label for="residueName">Nome do Resíduo:</label>
+      <input type="text" id="residueName" name="residueName" required>
+
+      <label for="residueType">Tipo:</label>
+      <input type="text" id="residueType" name="residueType" required>
+
+      <label for="residueQuantity">Quantidade:</label>
+      <input type="number" id="residueQuantity" name="residueQuantity" required>
+
+      <label for="residueLocation">Localização:</label>
+      <input type="text" id="residueLocation" name="residueLocation" required>
+
+      <button type="submit">Salvar Alterações</button>
+    </form>
+    <p id="statusMessage"></p>
+  </div>
+
+  <script src="../service/residue-edit.js"></script>
+</body>
+</html>
