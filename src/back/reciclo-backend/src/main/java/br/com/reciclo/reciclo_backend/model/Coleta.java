@@ -28,17 +28,14 @@ public class Coleta {
     @Column
     private StatusColeta status;
 
-    @OneToOne
-    @JoinColumn(name = "residuo_id", nullable = false)
-    private Residuos residuo;
-
-    @OneToOne(mappedBy = "coleta", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id", nullable = true)
     private Endereco endereco;
 
     @Column(name = "codigo_seguranca", nullable = false)
     private String codigoSeguranca;
 
-    @Column(name = "residuo_id", nullable = false, unique = true)
+    @Column(name = "residuo_id", nullable = false)
     private Long residuoId;
 
     @Column

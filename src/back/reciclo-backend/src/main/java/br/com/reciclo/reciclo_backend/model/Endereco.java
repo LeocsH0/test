@@ -11,8 +11,7 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "coleta_id")
+    @OneToOne(mappedBy = "endereco")
     private Coleta coleta;
 
     private String logradouro;

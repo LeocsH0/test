@@ -1,6 +1,10 @@
 package br.com.reciclo.reciclo_backend.model.enums;
 
-public class TiposDeResiduos {
+public enum TiposDeResiduos {
+    METAL("metal"),
+    PLASTICO("plastico"),
+    PAPEL("papel"),
+    VIDRO("vidro");
 
     private String tipo;
 
@@ -11,8 +15,5 @@ public class TiposDeResiduos {
     public String getTipo() {
         return tipo;
     }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 }
+

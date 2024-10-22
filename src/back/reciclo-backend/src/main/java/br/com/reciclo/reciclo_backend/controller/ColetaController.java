@@ -2,9 +2,11 @@ package br.com.reciclo.reciclo_backend.controller;
 
 
 import br.com.reciclo.reciclo_backend.model.Coleta;
+import br.com.reciclo.reciclo_backend.model.Residuos;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaRequestDTO;
 import br.com.reciclo.reciclo_backend.service.ColetaService;
+import br.com.reciclo.reciclo_backend.service.ResiduosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,11 +21,16 @@ public class ColetaController {
     @Autowired
     private ColetaService coletaService;
 
-    @PostMapping("/cadastrar/{produtorId}/{residuoId}")
+    @Autowired
+    private ResiduosService residuoService;
+
+    @PostMapping("/cadastrar/{produtorId}")
     public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId,
-                                             @PathVariable Long residuoId,
-                                             @RequestBody ColetaRequestDTO coletaRequestDTO) {
-        ColetaDTO novColeta = coletaService.cadastrarColeta(produtorId, residuoId, coletaRequestDTO);
+                                             @RequestBody ColetaRequestDTO data) {
+        //TODO: SEPARAR DADOS DO RESIDUO E INSTANCIAR O MESMO E SALVAR NA BASE
+        Residuos residuo = new Residuos(data.tipoResiduo(), data.qtdResiduo(), data.undResiduo(), data.descricaoResiduo());
+        Long residuoId = this.residuoService.cadastrarResiduo(residuo);
+        ColetaDTO novColeta = this.coletaService.cadastrarColeta(produtorId, residuoId, data);
         return ResponseEntity.ok(novColeta);
     }
 
