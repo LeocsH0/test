@@ -86,8 +86,6 @@ public class Coleta {
     }
 
     public ColetaDTO toDTO() {
-        UserDetailResponseDTO coletor = new UserDetailResponseDTO(codigoSeguranca, codigoSeguranca, codigoSeguranca, TipoUsuario.COLETOR);
-        UserDetailResponseDTO produtor = new UserDetailResponseDTO(codigoSeguranca, codigoSeguranca, codigoSeguranca, TipoUsuario.PRODUTOR);
-        return new ColetaDTO(id, produtor, coletor, status);
+        return new ColetaDTO(id, status);
     }
 }
