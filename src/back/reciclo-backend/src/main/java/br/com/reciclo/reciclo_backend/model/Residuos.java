@@ -28,10 +28,10 @@ public class Residuos {
     }
 
     public Residuos(TiposDeResiduos tipo, Integer quantidade, String unidades, String descricao) {
-       this.tipo = tipo;
-       this.quantidade = quantidade;
-       this.unidades = unidades;
-       this.descricao = descricao;
+        this.tipo = tipo;
+        this.quantidade = quantidade;
+        this.unidades = unidades;
+        this.descricao = descricao;
     }
 
     @Override
