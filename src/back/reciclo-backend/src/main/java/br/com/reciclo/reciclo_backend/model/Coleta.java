@@ -28,9 +28,9 @@ public class Coleta {
     @Column
     private StatusColeta status;
 
-    // @OneToOne
-    // @JoinColumn(name = "residuo_id", nullable = false)
-    // private Residuo residuoId
+    @OneToOne
+    @JoinColumn(name = "residuo_id", nullable = false)
+    private Residuos residuo;
 
     @OneToOne(mappedBy = "coleta", cascade = CascadeType.ALL)
     private Endereco endereco;
