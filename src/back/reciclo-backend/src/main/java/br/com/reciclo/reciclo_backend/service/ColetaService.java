@@ -28,10 +28,7 @@ public class ColetaService {
         this.usuariosRepository = usuariosRepository;
     }
 
-    public ColetaDTO cadastrarColeta(Long produtorId, ColetaRequestDTO dto) {
-        Usuarios produtor = this.usuariosRepository.findById(produtorId)
-                .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado"));
-
+    public ColetaDTO cadastrarColeta(Usuarios produtor, ColetaRequestDTO dto) {
         Residuos residuo = ResiduoFactory.criar(dto);
         Endereco endereco = EnderecoFactory.criar(dto);
         Coleta novColeta = new Coleta(produtor, residuo, endereco);
