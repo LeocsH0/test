@@ -16,7 +16,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpvYW8uY29sZXRvckB0ZXN0ZS5jb20iLCJleHAiOjE3Mjk0MDMzNzl9.hEjVUlkSRmB812fWT4FmKHJIs3hABZg06-xRlHmaZ9E"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImNvbGV0b3JAeWFob28uY29tIiwidHlwZSI6ImNvbGV0b3IiLCJleHAiOjE3Mjk2NTcwMTR9.MMJ90t3RNXPATRuPcuCQ25lgDJ9NKGqmHJWxf4vG0HI"
 							}
 						},
 						"method": "GET",
@@ -31,7 +31,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsImV4cCI6MTcyOTQwNDM0OH0.AqQ3eqJehZlvx-DyX_7_bOS8OKpEGM9fU7Nvh5ymZXU"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTcyOTY0MjU2Nn0.Oe11J5z97OBgtKIvY-1UmiRjrC7a_fa3iUFihd2424s"
 							}
 						},
 						"method": "GET",
@@ -70,7 +70,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Joao Pedro\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"jpvdo@yahoo.com\",\r\n    \"cellphone\": \"31975881152\",\r\n    \"type\": \"ADMIN\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Joao Pedro\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"coletor@yahoo.com\",\r\n    \"cellphone\": \"31975881152\",\r\n    \"type\": \"COLETOR\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -78,6 +78,50 @@
 							}
 						},
 						"url": "http://localhost:8080/api/v1/auth/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coletas",
+			"item": [
+				{
+					"name": "Buscar coletas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTcyOTY1NDEyOH0.H2cLfdyBr0Erx2cNY-JKBLKLNEZyuIbhG2631D9Zn6A"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/coletas"
+					},
+					"response": []
+				},
+				{
+					"name": "Criar coleta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTcyOTY1NzIyNn0.EoRT-FFQrtCQOEmWkEvBn6YU6QorCHGIzE_q8-fhnIw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"logradouro\": \"Rua Alagoas\",\r\n    \"cidade\": \"Belo Horizonte\",\r\n    \"estado\": \"Minas Gerais\",\r\n    \"cep\": \"30130-167\",\r\n    \"bairro\": \"Savassi\",\r\n    \"numero\": \"001\",\r\n    \"complemento\": \"1201\",\r\n    \"tipoResiduo\": \"VIDRO\",\r\n    \"descricaoResiduo\": \"Janelas e espelhos\",\r\n    \"qtdResiduo\": 6,\r\n    \"undResiduo\": \"kg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/coletas/cadastrar"
 					},
 					"response": []
 				}
