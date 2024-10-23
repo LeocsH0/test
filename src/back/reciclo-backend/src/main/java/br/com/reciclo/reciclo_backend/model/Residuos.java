@@ -3,24 +3,28 @@ package br.com.reciclo.reciclo_backend.model;
 import java.util.Objects;
 
 import br.com.reciclo.reciclo_backend.model.enums.TiposDeResiduos;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "residuos")
 public class Residuos {
     
     @Id
+    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-
+    @Enumerated(EnumType.STRING)
+    @Column
     private TiposDeResiduos tipo;
-    private String descricao; 
+
+    @Column
+    private String descricao;
+
+    @Column
     private Integer quantidade;
+
+    @Column
     private String unidades;
 
 
@@ -63,15 +67,15 @@ public class Residuos {
     }
 
     private boolean ValidaQuantidades(){
-
+        return false;
     }
 
     private boolean ValidaTipos(){
-
+        return false;
     }
 
     private boolean ValidaUnidades(){
-
+        return false;
     }
 
     public TiposDeResiduos getTipo(){
@@ -88,6 +92,10 @@ public class Residuos {
 
     public String getDescricao(){
         return this.descricao;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
 

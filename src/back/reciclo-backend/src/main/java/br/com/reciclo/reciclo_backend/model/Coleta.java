@@ -1,5 +1,6 @@
 package br.com.reciclo.reciclo_backend.model;
 
+import java.security.SecureRandom;
 import java.time.LocalDate;
 
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
@@ -28,30 +29,30 @@ public class Coleta {
     @Column
     private StatusColeta status;
 
-    @OneToOne
-    @JoinColumn(name = "residuo_id", nullable = false)
-    private Residuos residuo;
-
-    @OneToOne(mappedBy = "coleta", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id", nullable = true)
     private Endereco endereco;
 
     @Column(name = "codigo_seguranca", nullable = false)
     private String codigoSeguranca;
 
-    @Column(name = "residuo_id", nullable = false, unique = true)
-    private Long residuoId;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "residuo_id", nullable = false)
+    private Residuos residuo;
 
     @Column
     private LocalDate data;
 
-    public Coleta(Usuarios produtor, Long residuoId){
+    private static final int TAMANHO_CODIGO_SEGURANCA = 4;
+
+    public Coleta(Usuarios produtor, Residuos residuo, Endereco endereco) {
         this.produtor = produtor;
         this.coletor = null;
         this.status = StatusColeta.DISPONIVEL;
-        // TODO: implementar código de segurança
-        this.codigoSeguranca = "teste";
-        this.residuoId = residuoId;
+        this.codigoSeguranca = this.gerarCodigoSeguranca();
+        this.residuo = residuo;
         this.data = LocalDate.now();
+        this.endereco = endereco;
     }
 
     public Coleta() {}
@@ -87,5 +88,17 @@ public class Coleta {
 
     public ColetaDTO toDTO() {
         return new ColetaDTO(id, status);
+    }
+
+    private String gerarCodigoSeguranca() {
+        StringBuilder codigo = new StringBuilder(TAMANHO_CODIGO_SEGURANCA);
+        SecureRandom random = new SecureRandom();
+
+        for (int i = 0; i < TAMANHO_CODIGO_SEGURANCA; i++) {
+            int digito = random.nextInt(10);
+            codigo.append(digito);
+        }
+
+        return codigo.toString();
     }
 }

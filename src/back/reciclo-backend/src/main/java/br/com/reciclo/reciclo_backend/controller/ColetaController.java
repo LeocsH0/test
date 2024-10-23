@@ -2,12 +2,16 @@ package br.com.reciclo.reciclo_backend.controller;
 
 
 import br.com.reciclo.reciclo_backend.model.Coleta;
+import br.com.reciclo.reciclo_backend.model.Residuos;
+import br.com.reciclo.reciclo_backend.model.Usuarios;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaRequestDTO;
 import br.com.reciclo.reciclo_backend.service.ColetaService;
+import br.com.reciclo.reciclo_backend.service.ResiduosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,12 +23,14 @@ public class ColetaController {
     @Autowired
     private ColetaService coletaService;
 
-    @PostMapping("/cadastrar/{produtorId}/{residuoId}")
-    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId,
-                                             @PathVariable Long residuoId,
-                                             @RequestBody ColetaRequestDTO coletaRequestDTO) {
-        ColetaDTO novColeta = coletaService.cadastrarColeta(produtorId, residuoId, coletaRequestDTO);
-        return ResponseEntity.ok(novColeta);
+    @Autowired
+    private ResiduosService residuoService;
+
+    @PostMapping("/cadastrar")
+    public ResponseEntity<ColetaDTO> cadastrarColeta(Authentication authentication, @RequestBody ColetaRequestDTO data) {
+        Usuarios produtor = (Usuarios) authentication.getPrincipal();
+        ColetaDTO coleta = this.coletaService.cadastrarColeta(produtor, data);
+        return ResponseEntity.status(HttpStatus.CREATED).body(coleta);
     }
 
     @PutMapping("/requisitar/{coletorId}/{coletaId}")

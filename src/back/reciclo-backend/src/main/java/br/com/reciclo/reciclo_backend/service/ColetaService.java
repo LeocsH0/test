@@ -1,7 +1,11 @@
 package br.com.reciclo.reciclo_backend.service;
 
+import br.com.reciclo.reciclo_backend.exception.ResourceNotFoundException;
+import br.com.reciclo.reciclo_backend.factory.EnderecoFactory;
+import br.com.reciclo.reciclo_backend.factory.ResiduoFactory;
 import br.com.reciclo.reciclo_backend.model.Coleta;
 import br.com.reciclo.reciclo_backend.model.Endereco;
+import br.com.reciclo.reciclo_backend.model.Residuos;
 import br.com.reciclo.reciclo_backend.model.Usuarios;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaRequestDTO;
@@ -24,19 +28,11 @@ public class ColetaService {
         this.usuariosRepository = usuariosRepository;
     }
 
-    public ColetaDTO cadastrarColeta(Long produtorId, Long residuoId, ColetaRequestDTO coletaRequestDTO) {
-        Optional<Usuarios> usuarioOptional = this.usuariosRepository.findById(produtorId);
-        Usuarios produtor = usuarioOptional.get();
-        Coleta novColeta = new Coleta(produtor, residuoId);
-        Endereco endereco = new Endereco(novColeta,
-                coletaRequestDTO.logradouro(),
-                coletaRequestDTO.numero(),
-                coletaRequestDTO.complemento(),
-                coletaRequestDTO.bairro(),
-                coletaRequestDTO.cidade(),
-                coletaRequestDTO.estado(),
-                coletaRequestDTO.cep());
-        novColeta.setEndereco(endereco);
+    public ColetaDTO cadastrarColeta(Usuarios produtor, ColetaRequestDTO dto) {
+        Residuos residuo = ResiduoFactory.criar(dto);
+        Endereco endereco = EnderecoFactory.criar(dto);
+        Coleta novColeta = new Coleta(produtor, residuo, endereco);
+
         this.coletaRepository.save(novColeta);
         return novColeta.toDTO();
     }
