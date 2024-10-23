@@ -25,12 +25,8 @@ public class ColetaController {
     private ResiduosService residuoService;
 
     @PostMapping("/cadastrar/{produtorId}")
-    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId,
-                                             @RequestBody ColetaRequestDTO data) {
-        //TODO: SEPARAR DADOS DO RESIDUO E INSTANCIAR O MESMO E SALVAR NA BASE
-        Residuos residuo = new Residuos(data.tipoResiduo(), data.qtdResiduo(), data.undResiduo(), data.descricaoResiduo());
-        Long residuoId = this.residuoService.cadastrarResiduo(residuo);
-        ColetaDTO novColeta = this.coletaService.cadastrarColeta(produtorId, residuoId, data);
+    public ResponseEntity<?> cadastrarColeta(@PathVariable Long produtorId, @RequestBody ColetaRequestDTO data) {
+        ColetaDTO novColeta = this.coletaService.cadastrarColeta(produtorId, data);
         return ResponseEntity.ok(novColeta);
     }
 
