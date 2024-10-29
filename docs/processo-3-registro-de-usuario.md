@@ -57,28 +57,6 @@ Se em algum momento o usuário desejar alterar suas informações, ele poderá f
 
 ---
 
-#### **Correção de Dados Errados/Faltantes**
-
-| Campo             | Tipo               | Restrições                 | Valor Default   |
-|-------------------|--------------------|----------------------------|-----------------|
-| Dados incorretos  | Caixa de texto      | Campos obrigatórios        | Últimos dados preenchidos |
-
-- **Comandos:**  
-  - **enviar correção**: Inicia nova validação dos dados corrigidos  
-
----
-
-#### **Confirmação do E-mail**
-
-| Campo             | Tipo               | Restrições                 | Valor Default   |
-|-------------------|--------------------|----------------------------|-----------------|
-| Link de confirmação | Link no e-mail   | Necessário clicar no link   | Nenhum          |
-
-- **Comandos:**  
-  - **confirmar e-mail**: Finaliza o processo de cadastro e ativa a conta  
-
----
-
 #### **Acesso às Funcionalidades**
 
 | Campo             | Tipo               | Restrições                 | Valor Default   |
@@ -110,17 +88,6 @@ Se em algum momento o usuário desejar alterar suas informações, ele poderá f
 - **Comandos:**  
   - **validação aprovada**: Confirma a alteração dos dados  
   - **validação reprovada**: Retorna para correção dos dados  
-
----
-
-#### **Correção de Dados Alterados (se necessário)**
-
-| Campo             | Tipo               | Restrições                 | Valor Default   |
-|-------------------|--------------------|----------------------------|-----------------|
-| Dados incorretos  | Caixa de texto      | Campos obrigatórios        | Dados incorretos inseridos |
-
-- **Comandos:**  
-  - **enviar correção**: Inicia nova validação dos dados corrigidos  
 
 ---
 
