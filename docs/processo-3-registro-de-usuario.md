@@ -7,7 +7,7 @@ Uma vez que os dados estejam corretos e validados, o sistema envia um e-mail de 
 
 Se em algum momento o usuário desejar alterar suas informações, ele poderá fazê-lo através da plataforma. As novas informações serão novamente submetidas à validação, garantindo que os dados estejam sempre corretos e atualizados. O sistema, assim, garante uma interação contínua e eficiente, tanto para coletores quanto para disponibilizadores de resíduos, assegurando que as informações sejam mantidas de forma precisa para otimizar a experiência de todos os usuários.
 
-![Exemplo de um Modelo BPMN do PROCESSO 4](./images/processo-3-registro-usuario.jpeg "Modelo BPMN do Processo 4.")
+![Exemplo de um Modelo BPMN do PROCESSO 4](./images/processo-3-registro-usuario.png "Processo 3")
 
 
 
