@@ -1,6 +1,6 @@
-import { ResidueService } from './residuos-service.js';
+import { ColetaService } from './coleta-service.js';
 
-const residueService = new ResidueService();
+const coletaService = new ColetaService();
 
 document.getElementById('editResidueForm').addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -15,7 +15,7 @@ document.getElementById('editResidueForm').addEventListener('submit', async (e) 
   };
 
   try {
-    const updatedResidue = await residueService.putResiduo(residue);
+    const updatedResidue = await coletaService.putResiduo(residue);
     document.getElementById('statusMessage').textContent = 'Resíduo atualizado com sucesso!';
     document.getElementById('statusMessage').style.color = 'green';
   } catch (error) {

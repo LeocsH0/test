@@ -12,11 +12,11 @@ const toolbarRoutes = {
     ],
     coletor: [
         {
-            href: "./coletador/lista-demandas.html",
+            href: "./coletor/coletas.html",
             text: "Coletas Disponíveis"
         },
         {
-            href: "./coletador/minhas-demandas.html",
+            href: "./coletor/minhas-demandas.html",
             text: "Minhas Coletas"
         }
     ],

@@ -1,64 +1,61 @@
-import {ColetaService} from "../../service/coleta-service.js";
-import {DeliveryService} from "../../service/entrega-service.js";
+import { ColetaService } from "../../service/coleta-service.js";
 import { tipoResiduos } from "./utils/tipo-residuos.js";
 
 const coletaService = new ColetaService();
-const deliveryService = new DeliveryService();
-const statusDelivery = ["PENDENTE", "AGUARDANDO COLETA", "CONCLUIDO"]
 
-async function setupPageListResidues() {
-    if (!isUserProducer()) throw new Error("Voce não é um Produtor de Residuos");
-    const residueList = await coletaService.getResidueByProducerId(getUserId());
+async function setupPageListDemands() {
+  const residueListTotal = await coletaService.getColetasPorStatus("DISPONIVEL");
 
-    if (residueList.length > 0) {
-        const emptyList = document.getElementById('empty_residues');
-        emptyList.classList.add('d-none')
+  const selectElement = document.getElementById('materialType');
+  let tipoSelecionado = 'Todos';
 
-        const listResidues = document.getElementById('list_residues');
-        listResidues.classList.remove('d-none')
-        listResidues.classList.add('d-flex')
-    }
+  selectElement.addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    tipoSelecionado = selectedValue;
+    let residueList = residueListTotal.filter(residuo => !residuo.collectorId);
+    const list_demands = document.getElementById('list_demands');
+    list_demands.innerHTML = '';
 
-    for (let i = 0; i < residueList.length; i++) {
-        const residue = residueList[i];
-        const deliveryResidue  = await deliveryService.getDelivery(residue.deliveryId);
-        const cardResidueData = createCardResidueData(residue, deliveryResidue)
-        createCardResidueComponent(cardResidueData)
-    }
+    populateDemandas(residueList, tipoSelecionado); 
+  });
+
+  populateDemandas(residueListTotal, tipoSelecionado); 
 }
 
-function createCardResidueData(residue, deliveryResidue) {
-    const cardResidueData = {}
-    cardResidueData.type = tipoResiduos[residue.residuesTypesId];
-    cardResidueData.address = deliveryResidue.address;
-    cardResidueData.residueId = residue.id;
+async function populateDemandas(residueList, tipoSelecionado) {
+  if (tipoSelecionado !== 'Todos') {
+    residueList = residueList.filter(demanda => tipoResiduos[demanda.residuo.tipo] === tipoSelecionado);
+  }
 
-    if (!deliveryResidue.concluded && !residue.collectorId) {
-        cardResidueData.status = statusDelivery[0];
-    } else if (!deliveryResidue.concluded && residue.collectorId){
-        cardResidueData.status = statusDelivery[1];
-    } else if (deliveryResidue.concluded && residue.collectorId){
-        cardResidueData.status = statusDelivery[2];
-    }
+  if (residueList.length > 0) {
+    const emptyList = document.getElementById('empty_demands');
+    emptyList.classList.add('d-none')
+
+    const list_demands = document.getElementById('list_demands');
+    list_demands.classList.remove('d-none')
+    list_demands.classList.add('d-flex')
+  }
+
+  for (let i = 0; i < residueList.length; i++) {
+    const residue = residueList[i];
+    const cardResidueData = createCardResidueData(residue)
+    createCardResidueComponent(cardResidueData)
+  }
+}
+
+function createCardResidueData(coleta) {
+    const cardResidueData = {}
+    cardResidueData.type = tipoResiduos[coleta.residuo.tipo];
+    cardResidueData.address = coleta.endereco.bairro;
+    cardResidueData.residueId = coleta.id;
+
     return cardResidueData;
 }
 
-function getUserId(){
-    return localStorage.getItem("id");
-}
-
-function isUserProducer(){
-    const userTypeId = localStorage.getItem("userTypeId");
-    if (parseInt(userTypeId) === 1) {
-        return true;
-    }
-    return false;
-}
-
-window.addEventListener("load", setupPageListResidues);
+window.addEventListener("load", setupPageListDemands);
 
 function createCardResidueComponent(cardData) {
-    var cardContainer = document.getElementById('list_residues');
+    var cardContainer = document.getElementById('list_demands');
     
     var card = document.createElement('div');
     card.className = 'card';
@@ -76,12 +73,9 @@ function createCardResidueComponent(cardData) {
     var titleSpan1 = document.createElement('span');
     titleSpan1.textContent = cardData.type;
     var titleSpan2 = document.createElement('span');
-    titleSpan2.textContent = ' - ';
-    var titleSpan3 = document.createElement('span');
-    titleSpan3.textContent = cardData.status;
+
     titleDiv.appendChild(titleSpan1);
     titleDiv.appendChild(titleSpan2);
-    titleDiv.appendChild(titleSpan3);
 
     var addressDiv = document.createElement('div');
     var addressSpan = document.createElement('span');
@@ -98,7 +92,7 @@ function createCardResidueComponent(cardData) {
     button.type = 'button';
     button.style.all = 'unset';
     button.addEventListener('click', function() {
-    window.location.href =  `visualizar-demanda.html?id=${cardData.residueId}`;
+    window.location.href =  `visualizar-coleta.html?id=${cardData.residueId}`;
     });
     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');

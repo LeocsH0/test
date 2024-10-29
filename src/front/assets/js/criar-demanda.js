@@ -1,8 +1,8 @@
 import { DeliveryService } from '../../service/entrega-service.js';
-import {ResidueService} from '../../service/residuos-service.js';
+import {ColetaService} from '../../service/residuos-service.js';
 
 const deliveryService = new DeliveryService();
-const residueService = new ResidueService();
+const coletaService = new ColetaService();
 
 function observerSubmitForm() {
     const formAddResidue = document.getElementById("add_residue_form");
@@ -43,7 +43,7 @@ async function handleAddResidue(event) {
             description: description
         }
 
-        const residueCreated = await residueService.postResiduo(residueData);
+        const residueCreated = await coletaService.postResiduo(residueData);
 
         if(residueCreated) window.location.href = `visualizar-demanda.html?id=${residueCreated.id}`;
 
