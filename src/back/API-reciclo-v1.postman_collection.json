@@ -92,12 +92,30 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTcyOTY1NDEyOH0.H2cLfdyBr0Erx2cNY-JKBLKLNEZyuIbhG2631D9Zn6A"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTczMDE3NzUzOX0.E1FWmgc9tQ0oNvpYqAg1NFJzwCqBNhGxIQcPKwUHBWY"
 							}
 						},
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:8080/api/v1/coletas"
+						"url": {
+							"raw": "http://localhost:8080/api/v1/coletas?status=DISPONIVEL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"coletas"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "DISPONIVEL"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -107,14 +125,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTcyOTY1NzIyNn0.EoRT-FFQrtCQOEmWkEvBn6YU6QorCHGIzE_q8-fhnIw"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTczMDE3NzUzOX0.E1FWmgc9tQ0oNvpYqAg1NFJzwCqBNhGxIQcPKwUHBWY"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"logradouro\": \"Rua Alagoas\",\r\n    \"cidade\": \"Belo Horizonte\",\r\n    \"estado\": \"Minas Gerais\",\r\n    \"cep\": \"30130-167\",\r\n    \"bairro\": \"Savassi\",\r\n    \"numero\": \"001\",\r\n    \"complemento\": \"1201\",\r\n    \"tipoResiduo\": \"VIDRO\",\r\n    \"descricaoResiduo\": \"Janelas e espelhos\",\r\n    \"qtdResiduo\": 6,\r\n    \"undResiduo\": \"kg\"\r\n}",
+							"raw": "{\r\n    \"logradouro\": \"Rua Alagoas\",\r\n    \"cidade\": \"Belo Horizonte\",\r\n    \"estado\": \"Minas Gerais\",\r\n    \"cep\": \"30130-167\",\r\n    \"bairro\": \"Belvedere\",\r\n    \"numero\": \"001\",\r\n    \"complemento\": \"1201\",\r\n    \"tipoResiduo\": \"PAPEL\",\r\n    \"descricaoResiduo\": \"Janelas e espelhos\",\r\n    \"qtdResiduo\": 6,\r\n    \"undResiduo\": \"kg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -122,6 +140,54 @@
 							}
 						},
 						"url": "http://localhost:8080/api/v1/coletas/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "Requisitar Coleta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTczMDE3NzUzOX0.E1FWmgc9tQ0oNvpYqAg1NFJzwCqBNhGxIQcPKwUHBWY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/coletas/requisitar/1/14"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Coleta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJyZWNpY2xvLWFwaSIsInN1YiI6ImpwdmRvQHlhaG9vLmNvbSIsInR5cGUiOiJhZG1pbiIsImV4cCI6MTczMDE3NzUzOX0.E1FWmgc9tQ0oNvpYqAg1NFJzwCqBNhGxIQcPKwUHBWY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/coletas/delete/13"
 					},
 					"response": []
 				}
