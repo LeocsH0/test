@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#secundaria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#secundaria p{
+    color: #B0B0B0;
+}
+
+.lista-demanda{
+    display: flex;
+    flex-direction: column;
+}
+
+.demanda{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding-top: 4px !important;
+    padding: 0 12px;
+}
+
+
+#adicionar{
+    background-color: #1D4F91;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card_style{
+    all: unset !important;
+    padding: 10px !important;
+    color: gray !important;
+    font-size: 14px !important;
+}
+
+.title_card{
+    color: black !important;
+    font-weight: bold !important;
+}

@@ -1,8 +1,8 @@
 export const tipoResiduos = {
-  1: 'Vidro',
-  2: 'Plástico',
-  3: 'Papel',
-  4: 'Metal',
-  5: 'Pilha/Bateria',
-  6: 'Eletrônico',
+  "VIDRO": 'Vidro',
+  "PLASTICO": 'Plástico',
+  "PAPEL": 'Papel',
+  "METAL": 'Metal',
+  "PILHA": 'Pilha/Bateria',
+  "ELETRONICO": 'Eletrônico',
 }
