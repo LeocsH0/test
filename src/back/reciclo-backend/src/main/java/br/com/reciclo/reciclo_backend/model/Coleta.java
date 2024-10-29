@@ -87,7 +87,7 @@ public class Coleta {
     }
 
     public ColetaDTO toDTO() {
-        return new ColetaDTO(id, status);
+        return new ColetaDTO(id, produtor.getName(), status, residuo, endereco);
     }
 
     private String gerarCodigoSeguranca() {

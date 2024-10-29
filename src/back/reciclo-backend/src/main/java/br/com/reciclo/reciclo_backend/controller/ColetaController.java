@@ -6,6 +6,7 @@ import br.com.reciclo.reciclo_backend.model.Residuos;
 import br.com.reciclo.reciclo_backend.model.Usuarios;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaRequestDTO;
+import br.com.reciclo.reciclo_backend.model.enums.StatusColeta;
 import br.com.reciclo.reciclo_backend.service.ColetaService;
 import br.com.reciclo.reciclo_backend.service.ResiduosService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -64,9 +66,21 @@ public class ColetaController {
     }
 
     @GetMapping
-    public ResponseEntity<?> listarColetas() {
-        List<ColetaDTO> coletas = coletaService.listarColetas();
-        return ResponseEntity.ok(coletas);
+    public ResponseEntity<List<ColetaDTO>> listarColetas(@RequestParam(required = false) String status) {
+        List<ColetaDTO> coletas;
+
+        try {
+            if (status != null) {
+                StatusColeta statusColeta = StatusColeta.fromValue(status);
+                coletas = coletaService.listarColetasPorStatus(statusColeta);
+            } else {
+                coletas = coletaService.listarColetas();
+            }
+
+            return ResponseEntity.ok(coletas);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(Collections.emptyList());
+        }
     }
 
     @GetMapping("/{id}")

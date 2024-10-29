@@ -11,9 +11,6 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(mappedBy = "endereco")
-    private Coleta coleta;
-
     private String logradouro;
     private String numero;
     private String complemento;
@@ -36,6 +33,50 @@ public class Endereco {
     }
 
     public EnderecoDTO gerarDTO() {
-        return new EnderecoDTO(coleta.toDTO(), logradouro, numero, complemento, bairro, cidade, estado, cep);
+        return new EnderecoDTO(logradouro, numero, complemento, bairro, cidade, estado, cep);
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "id=" + id +
+                ", rua='" + logradouro + '\'' +
+                ", numero='" + numero + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                '}';
     }
 }
