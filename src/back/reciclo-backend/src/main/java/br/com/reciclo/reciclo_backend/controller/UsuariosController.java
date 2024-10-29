@@ -28,7 +28,6 @@ public class UsuariosController {
     @GetMapping("/detail")
     public ResponseEntity<UserDetailResponseDTO> buscarUsuarioDetail(Authentication authentication){
         Usuarios user = (Usuarios) authentication.getPrincipal();
-        System.out.println(user.getAuthorities());
         UserDetailResponseDTO userResponse = userService.buscarUsuariosPorEmail(user.getEmail());
 
         return ResponseEntity.ok(userResponse);

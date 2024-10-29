@@ -1,11 +1,13 @@
 package br.com.reciclo.reciclo_backend.controller;
 
 
+import br.com.reciclo.reciclo_backend.exception.ResourceNotFoundException;
 import br.com.reciclo.reciclo_backend.model.Coleta;
 import br.com.reciclo.reciclo_backend.model.Residuos;
 import br.com.reciclo.reciclo_backend.model.Usuarios;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaRequestDTO;
+import br.com.reciclo.reciclo_backend.model.dto.DeleteResponseDTO;
 import br.com.reciclo.reciclo_backend.model.enums.StatusColeta;
 import br.com.reciclo.reciclo_backend.service.ColetaService;
 import br.com.reciclo.reciclo_backend.service.ResiduosService;
@@ -91,7 +93,14 @@ public class ColetaController {
     }
 
     @DeleteMapping("/delete/{coletaId}")
-    public @ResponseBody Boolean deletarColeta(@PathVariable Long coletaId) {
-        return coletaService.deletarColeta(coletaId);
+    public @ResponseBody ResponseEntity<DeleteResponseDTO> deletarColeta(@PathVariable Long coletaId) {
+        try {
+            coletaService.deletarColeta(coletaId);
+            return new ResponseEntity<>(new DeleteResponseDTO(HttpStatus.OK, "Coleta deletada com sucesso."), HttpStatus.OK);
+        } catch (ResourceNotFoundException ex) {
+            return new ResponseEntity<>(new DeleteResponseDTO(HttpStatus.NOT_FOUND, ex.getMessage()), HttpStatus.NOT_FOUND);
+        } catch (RuntimeException ex) {
+            return new ResponseEntity<>(new DeleteResponseDTO(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

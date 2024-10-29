@@ -84,14 +84,16 @@ public class ColetaService {
         return coletasDTO;
     }
 
-    public boolean deletarColeta(Long coletaId) {
-        this.coletaRepository.deleteById(coletaId);
-        Coleta coleta = buscarColeta(coletaId);
-        Boolean resposta = false;
-        if (coleta == null) {
-            resposta = true;
+    public void deletarColeta(Long coletaId) {
+        if (!coletaRepository.existsById(coletaId)) {
+            throw new ResourceNotFoundException("Coleta não encontrada.");
         }
-        return resposta;
+
+        try {
+            coletaRepository.deleteById(coletaId);
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao deletar a coleta.");
+        }
     }
 
     public Coleta buscarColeta(Long coletaId) {
