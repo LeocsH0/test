@@ -9,6 +9,7 @@ import br.com.reciclo.reciclo_backend.model.Residuos;
 import br.com.reciclo.reciclo_backend.model.Usuarios;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaDTO;
 import br.com.reciclo.reciclo_backend.model.dto.ColetaRequestDTO;
+import br.com.reciclo.reciclo_backend.model.enums.StatusColeta;
 import br.com.reciclo.reciclo_backend.respositories.ColetaRepository;
 import br.com.reciclo.reciclo_backend.respositories.UsuariosRepository;
 import org.springframework.stereotype.Service;
@@ -65,6 +66,16 @@ public class ColetaService {
 
     public List<ColetaDTO> listarColetas() {
         List<Coleta> coletas = this.coletaRepository.findAll();
+        List<ColetaDTO> coletasDTO = new ArrayList<>();
+        for (Coleta c : coletas) {
+            ColetaDTO dto = c.toDTO();
+            coletasDTO.add(dto);
+        }
+        return coletasDTO;
+    }
+
+    public List<ColetaDTO> listarColetasPorStatus(StatusColeta status) {
+        List<Coleta> coletas = this.coletaRepository.findByStatus(status);
         List<ColetaDTO> coletasDTO = new ArrayList<>();
         for (Coleta c : coletas) {
             ColetaDTO dto = c.toDTO();

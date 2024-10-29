@@ -15,4 +15,14 @@ public enum StatusColeta {
     public String getStatus() {
         return status;
     }
+
+    public static StatusColeta fromValue(String value) {
+        for (StatusColeta status : StatusColeta.values()) {
+            if (status.getStatus().equalsIgnoreCase(value)) {
+                return status;
+            }
+        }
+
+        throw new IllegalArgumentException("Status inválido: " + value);
+    }
 }

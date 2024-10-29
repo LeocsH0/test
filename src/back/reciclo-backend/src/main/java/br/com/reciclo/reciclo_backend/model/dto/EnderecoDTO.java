@@ -2,7 +2,7 @@ package br.com.reciclo.reciclo_backend.model.dto;
 
 import br.com.reciclo.reciclo_backend.model.Coleta;
 
-public record EnderecoDTO(ColetaDTO coleta,
+public record EnderecoDTO(
                           String logradouro,
                           String numero,
                           String complemento,
